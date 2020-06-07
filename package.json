@@ -1,0 +1,32 @@
+{
+  "name": "marvistechnologies",
+  "version": "1.0.0",
+  "description": "Official website for marvis technologies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "marvtech",
+    "software",
+    "company",
+    "website",
+    "design",
+    "programming",
+    "technology",
+    "innovation",
+    "application",
+    "computer",
+    "science",
+    "database",
+    "management",
+    "systems"
+  ],
+  "author": "Wogu Chimaobi Johnson, Okechukwu Prosper Ekeoma",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.18"
+  }
+}

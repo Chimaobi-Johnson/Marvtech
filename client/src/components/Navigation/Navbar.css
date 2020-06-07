@@ -1,0 +1,12 @@
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.sticky ul li a {
+  color: #292929;
+}
