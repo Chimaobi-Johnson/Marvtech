@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 const FooterLeft = styled.div`
    flex-basis: 70%;
    display: flex;
-   align-items: center;
+   align-items: flex-start;
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       display: block;
    }

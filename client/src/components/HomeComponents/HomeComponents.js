@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Button } from "shards-react";
-
+import { NavLink } from "react-router-dom";
 import { theme, mq } from "../../constants/theme";
 
 const { small, xxxlarge } = theme.typography.size;
@@ -120,7 +120,10 @@ export const SectionOnePicture = styled.div`
        font-size: 1.1rem;
        padding: 1rem 0;
        a {
-         color: ${theme.colors.mediumBlue};
+         color: ${theme.colors.primary};
+         &:hover {
+           color: ${theme.colors.mediumBlue};
+         }
        }
      }
    }
@@ -129,6 +132,11 @@ export const SectionOnePicture = styled.div`
 export const SectionTwo = styled.div`
    align-items: center;
    margin: 8rem 0;
+   background-color: ${theme.colors.primary};
+   padding: 3rem 0;
+   p {
+     color: #fff;
+   }
 `;
 
 export const SectionTwoText = styled.div`
@@ -228,8 +236,11 @@ export const ImageContainer = styled.div`
    width: 87%;
    height: 50%;
    margin-top: 7rem;
-   background-color: ${theme.colors.mediumBlue};
+   background-color: #1c1c1c;
    position: relative;
+   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+     margin-top: 0;
+   }
    img {
      width: 100%;
      height: 100%;
@@ -237,12 +248,18 @@ export const ImageContainer = styled.div`
      top: -7%;
      left: 7%;
      box-shadow: -21px 22px 10px #2d2d2d69;
+     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+       top: 7%;
+       left: 5%;
+       box-shadow: -21px 10px 10px #2d2d2d3b;
+       position: relative;
+     }
    }
 `;
 
 
 export const AnimatedHeader = styled.h4`
-   color: ${theme.colors.mediumBlue};
+   color: #292929;
    padding-left: 8rem;
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       padding-left: 1rem;
@@ -259,10 +276,10 @@ export const ContactSection = styled.div`
    margin: 3rem 0;
    background-color: #ccc;
    padding: 5rem 9rem;
+   margin-bottom: 0;
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       display: block;
       padding: 2rem;
-      margin-bottom: 0;
    }
 `;
 
@@ -282,5 +299,13 @@ export const ContactInfo = styled.div`
      li {
        padding: .5rem 0;
      }
+   }
+`;
+
+export const StyledLink = styled(NavLink)`
+   text-decoration: none;
+   color: #292929;
+   &:hover {
+     color: ${theme.colors.primary};
    }
 `;

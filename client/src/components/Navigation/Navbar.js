@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { theme } from "../../constants/theme";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Navbar,
@@ -8,7 +9,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   Dropdown,
   DropdownToggle,
   DropdownMenu,
@@ -46,18 +46,30 @@ const StyledCollapse = styled(Collapse)`
 `;
 
 const StyledNavLink = styled(NavLink)`
+    padding: 0 .8rem;
+    text-decoration: none;
     color: #fff;
     &:hover {
       color: ${theme.colors.primary};
+      text-decoration: none;
     }
 `;
 
-const StyledNavBrand = styled(NavbarBrand)`
+const StyledNavBrand = styled(NavLink)`
       color: ${theme.colors.primary};
       font-weight: bold;
       /* font-family: 'Share Tech', sans-serif; */
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       text-transform: uppercase;
+      padding-top: .625rem;
+      padding-bottom: .625rem;
+      margin-right: 1.5rem;
+      display: inline-block;
+      text-decoration: none;
+      &:hover {
+        color: ${theme.colors.mediumBlue};
+        text-decoration: none;
+      }
 `;
 
 const StyledNavItem = styled(NavItem)`
@@ -97,33 +109,33 @@ const NavigationBar = props => {
 
   return (
   <StyledNavbar id="navheader" expand="md">
-       <StyledNavBrand href="#">MARVTECH</StyledNavBrand>
+       <StyledNavBrand to="/">MARVTECH</StyledNavBrand>
        <NavbarToggler onClick={toggleNavbar} />
 
        <StyledCollapse open={collapseOpen} navbar>
          <Nav navbar>
            <StyledNavItem>
-             <StyledNavLink active href="#">
+             <StyledNavLink active to="/">
                Home
              </StyledNavLink>
            </StyledNavItem>
            <StyledNavItem>
-             <StyledNavLink href="#">
+             <StyledNavLink to="/about">
                About
              </StyledNavLink>
            </StyledNavItem>
            <StyledNavItem>
-             <StyledNavLink href="#">
+             <StyledNavLink to="/services">
                Services
              </StyledNavLink>
            </StyledNavItem>
            <StyledNavItem>
-             <StyledNavLink href="#">
-               Pricing
+             <StyledNavLink to="/get-a-quote">
+               Get Quote
              </StyledNavLink>
            </StyledNavItem>
            <StyledNavItem>
-             <StyledNavLink href="#">
+             <StyledNavLink to="/contact">
                Contact
              </StyledNavLink>
            </StyledNavItem>

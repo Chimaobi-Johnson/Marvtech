@@ -26,7 +26,8 @@ import {
   ImageContainer,
   SectionThree,
   ContactSection,
-  ContactInfo
+  ContactInfo,
+  StyledLink
 } from "../components/HomeComponents/HomeComponents";
 
 const Home = props => {
@@ -90,7 +91,7 @@ const Home = props => {
                 <BlockOne>
                     <IconBox></IconBox>
                     <ContentBox>
-                      <h4>Web Design</h4>
+                      <h4><StyledLink to="/web-design">Web Design</StyledLink></h4>
                       <p>We design websites using content management systems
                       We design websites using content management systems
                       </p>
@@ -99,7 +100,7 @@ const Home = props => {
                 <BlockOne>
                     <IconBox></IconBox>
                     <ContentBox>
-                      <h4>Web Application Development</h4>
+                      <h4><StyledLink to="/web-development">Web Application Development</StyledLink></h4>
                       <p>We design websites using content management systems
                       We design websites using content management systems
                       </p>
@@ -108,7 +109,7 @@ const Home = props => {
                 <BlockOne>
                     <IconBox></IconBox>
                     <ContentBox>
-                      <h4>Mobile Application Development</h4>
+                      <h4><StyledLink to="/mobile-design">Mobile Application Development</StyledLink></h4>
                       <p>We design websites using content management systems
                       We design websites using content management systems
                       </p>
