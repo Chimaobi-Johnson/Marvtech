@@ -143,8 +143,56 @@ const MarvisBackground = styled.div`
 `;
 
 const Services = styled.div`
-
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
 `;
+
+const ServicesLeft = styled.div`
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap;
+`;
+
+const ServicesRight = styled.div`
+    flex: 1;
+`;
+
+const BlockOne = styled.div`
+   width: 50%;
+   padding: 2rem 4rem;
+`;
+
+const IconBox = styled.div`
+   flex-basis: 60%;
+`;
+
+const ContentBox = styled.div`
+   flex: 1;
+`;
+
+const ImageContainer = styled.div`
+   width: 87%;
+   height: 50%;
+   margin-top: 7rem;
+   background-color: ${theme.colors.mediumBlue};
+   position: relative;
+   img {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: -7%;
+     left: 7%;
+     box-shadow: -21px 22px 10px #2d2d2d69;
+   }
+`;
+
+
+const AnimatedHeader = styled.h4`
+   color: ${theme.colors.mediumBlue};
+   padding-left: 8rem;
+`;
+
 
 
 
@@ -198,9 +246,51 @@ const Home = props => {
             <MarvisBackground>
               <h1>MARVIS</h1>
             </MarvisBackground>
+            <AnimatedHeader>
+              <span className="animate__animated animate__fadeInLeft">THINK > </span>
+              <span className="animate__animated animate__fadeInLeft animate__delay-1s">CREATE > </span> 
+              <span className="animate__animated animate__fadeInLeft animate__delay-2s">INNOVATE</span>
+            </AnimatedHeader>
             <Services>
 
+               <ServicesLeft>
+                <BlockOne>
+                    <IconBox></IconBox>
+                    <ContentBox>
+                      <h4>Web Design</h4>
+                      <p>We design websites using content management systems
+                      We design websites using content management systems
+                      We design websites using content management systems</p>
+                    </ContentBox>
+                </BlockOne>
+                <BlockOne>
+                    <IconBox></IconBox>
+                    <ContentBox>
+                      <h4>Web Application Development</h4>
+                      <p>We design websites using content management systems
+                      We design websites using content management systems
+                      We design websites using content management systems</p>
+                    </ContentBox>
+                </BlockOne>
+                <BlockOne>
+                    <IconBox></IconBox>
+                    <ContentBox>
+                      <h4>Mobile Application Development</h4>
+                      <p>We design websites using content management systems
+                      We design websites using content management systems
+                      We design websites using content management systems</p>
+                    </ContentBox>
+                </BlockOne>
+              </ServicesLeft>
+
+              <ServicesRight>
+                   <ImageContainer>
+                        <img src={require("../images/notebook.jpg")}
+                         alt="#" />
+                   </ImageContainer>
+              </ServicesRight>
             </Services>
+
         </SectionThree>
      </Container>
   )
