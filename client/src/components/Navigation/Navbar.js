@@ -33,6 +33,12 @@ const StyledNavbar = styled(Navbar)`
    top: 0;
    left: 0;
    transition: all .7s;
+   .navbar-toggler {
+       border: 1px solid #9e9e9eb8;
+       background-color: transparent;
+       border-radius: none;
+       padding: .3rem .3rem;
+   }
 `;
 
 const StyledCollapse = styled(Collapse)`

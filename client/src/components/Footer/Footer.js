@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "shards-react";
 import { NavLink } from "react-router-dom";
-import { theme } from "../../constants/theme";
+import { theme, mq } from "../../constants/theme";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faGoogle, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
@@ -14,17 +14,27 @@ const Wrapper = styled.div`
    display: flex;
    padding: 4rem 3rem;
    align-items: center;
+   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+      display: block;
+      padding: 3rem 0;
+   }
 `;
 
 const FooterLeft = styled.div`
    flex-basis: 70%;
    display: flex;
    align-items: center;
+   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+      display: block;
+   }
 `;
 
 const FooterRight = styled.div`
    flex: 1;
    padding-left: 7rem;
+   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+      padding-left: 1rem;
+   }
    ul {
      list-style: none;
      display: flex;
@@ -37,6 +47,9 @@ const FooterRight = styled.div`
 
 const MenuContainer = styled.div`
    margin: 0 3rem;
+   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+      margin: 0;
+   }
    h3 {
      text-transform: uppercase;
      font-size: 1.2rem;
