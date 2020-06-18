@@ -10,7 +10,11 @@ export const FormContainer = styled.div`
    margin: 0 auto;
    padding: 2rem;
    border: 1px solid #ccc;
+   z-index: 1;
    background-color: #fff;
+   input {
+     border-radius: 0;
+   }
 `;
 
 const ContactForm = props => {
@@ -38,6 +42,7 @@ const ContactForm = props => {
            <label htmlFor="#message">Message</label>
            <FormTextarea />
          </FormGroup>
+         <Button outline>Send</Button>
      </Form>
     </FormContainer>
   )

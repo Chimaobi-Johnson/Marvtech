@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { Button } from "shards-react";
 import { NavLink } from "react-router-dom";
 import { theme, mq } from "../../constants/theme";
-
+import contactBg from '../../images/charles.jpg';
+import laptopImage from "../../images/silver-laptop.jpg";
+import womanWriting from "../../images/woman-writing.jpg";
 const { small, xxxlarge } = theme.typography.size;
-
 
 export const Container = styled.div`
    width: 100%;
@@ -29,11 +30,11 @@ export const VideoOverlay = styled.div`
    height: 100%;
    position: absolute;
    z-index: 250;
-   top: 50%;
+   top: 49%;
    left: 50%;
    transform: translate(-50%, -50%);
-   opacity: .8;
-   background-color: #333; /*#04a5f4*/
+   background-color: #0a0a0aab; /*#04a5f4*/;
+   /* background-image: linear-gradient(180deg, #0087ff00 0%, #007cff80 25%, #0087ffc2 70%, #007aff 100%); */
 `;
 
 export const LandingTextBox = styled.div`
@@ -76,13 +77,40 @@ export const SectionOne = styled.div`
    display: flex;
    align-items: center;
    width: 100%;
+   position: relative;
    justify-content: space-between;
-   margin: 8rem 0;
+   padding: 4rem 2rem;
+   height: 100vh;
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       display: block;
       margin: 4rem 0;
    }
 
+`;
+
+export const PolygonOne = styled.div`
+   background-color: ${theme.colors.purple};
+   clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0% 50%);
+   /* clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 33% 49%, 0% 0%); */
+   position: absolute;
+   top: 14%;
+   right: 0;
+   width: 40%;
+   height: 70%;
+   display: none;
+   z-index: -1;
+`;
+
+export const PolygonTwo = styled.div`
+   background-image: linear-gradient(260deg,rgba(23, 23, 23, 0.3),#3e94f2), url(${womanWriting});
+   background-size: cover;
+   clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0% 50%);
+   position: absolute;
+   height: 100vh;
+   top: 0%;
+   right: 0;
+   width: 55%;
+   z-index: -1;
 `;
 
 export const SectionOneText = styled.div`
@@ -91,6 +119,7 @@ export const SectionOneText = styled.div`
    padding-right: 10rem;
    font-size: 1.1rem;
    line-height: 1.7;
+   color: #000;
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       line-height: 1.5;
       border-right: none;
@@ -100,6 +129,7 @@ export const SectionOneText = styled.div`
 
    h2 {
      text-align: left;
+     color: #000;
      @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
         font-size: 1.7rem;
      }
@@ -120,7 +150,7 @@ export const SectionOnePicture = styled.div`
        font-size: 1.1rem;
        padding: 1rem 0;
        a {
-         color: ${theme.colors.primary};
+         color: #fff;
          &:hover {
            color: ${theme.colors.mediumBlue};
          }
@@ -131,12 +161,9 @@ export const SectionOnePicture = styled.div`
 
 export const SectionTwo = styled.div`
    align-items: center;
-   margin: 8rem 0;
-   background-color: ${theme.colors.primary};
-   padding: 3rem 0;
-   p {
-     color: #fff;
-   }
+   background-color: #fff;
+   padding: 4rem 0;
+   border-left: .3rem solid #292929;
 `;
 
 export const SectionTwoText = styled.div`
@@ -145,13 +172,14 @@ export const SectionTwoText = styled.div`
    line-height: 1.7;
    width: 50%;
    margin: 0 auto;
+   text-align: center;
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       text-align: center;
       padding-right: 0;
       width: 70%;
    }
    h2 {
-     text-align: left;
+     text-align: center;
      @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
         text-align: center;
      }
@@ -171,89 +199,107 @@ export const StyledButton = styled(Button)`
 
 export const SectionThree = styled.div`
    width: 100%;
-   height: 100vh;
    position: relative;
+   background-color: ${theme.colors.primary};
 `;
 
-
-export const MarvisBackground = styled.div`
-   height: 80vh;
-   width: 80%;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   z-index: -1;
-   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-      width: 90%;
-   }
-   h1 {
-     font-size: 16rem;
-     color: #6464640a;
-     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-        font-size: 7rem;
-        padding-top: 11rem;
-     }
-   }
-`;
 
 export const Services = styled.div`
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
-    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+    border-top: #ccc;
+    position: relative;
+    height: 100vh;
+    background-color: #fbfbfb;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23a4a4a4' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    border-top: 1px solid #ccc;
+    /* @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
        display: block;
-    }
-`;
-
-export const ServicesLeft = styled.div`
-    flex-basis: 70%;
-    display: flex;
-    flex-wrap: wrap;
+    } */
 `;
 
 export const ServicesRight = styled.div`
     flex: 1;
+    padding: 5rem 7rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
 `;
 
-export const BlockOne = styled.div`
-   width: 50%;
-   padding: 2rem 4rem;
-   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-      padding: 0;
+
+export const ArrowLeftBtn = styled(Button)`
+   position: absolute;
+   top: 46%;
+   left: 1%;
+   background: transparent;
+   border-color: transparent;
+   &:hover {
+     box-shadow: none;
+     background: transparent;
    }
 `;
 
-export const IconBox = styled.div`
-   flex-basis: 60%;
+export const ArrowRightBtn = styled(Button)`
+   position: absolute;
+   top: 46%;
+   right: 1%;
+   background: transparent;
+   color: #000;
+   border-color: transparent;
+   &:hover {
+     box-shadow: none;
+     background: transparent;
+     color: #000;
+     border-color: #fff;
+   }
 `;
+
+export const ServicesLeft = styled.div`
+    flex-basis: 50%;
+    background-size: cover;
+    background-image: linear-gradient(260deg,#9d9c9c17,#31313173), url(${laptopImage});
+`;
+
+export const StyledSpan = styled.span`
+    padding: .5rem 1rem;
+    color: #fff;
+    background-color: #292929;
+`;
+
+export const Title = styled.h1`
+   color: #292929;
+   margin-top: 2rem;
+`;
+
+export const Text = styled.p`
+  padding-top: 1.5rem;
+  line-height: 2;
+`;
+
+export const MoreButton = styled(Button)`
+  margin-top: 1rem;
+  border-radius: 0;
+`;
+
+
 
 export const ContentBox = styled.div`
    flex: 1;
 `;
 
 export const ImageContainer = styled.div`
-   width: 87%;
-   height: 50%;
-   margin-top: 7rem;
-   background-color: #1c1c1c;
+   width: 100%;
+   height: 100%;
    position: relative;
-   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-     margin-top: 0;
-   }
    img {
      width: 100%;
      height: 100%;
      position: absolute;
-     top: -7%;
-     left: 7%;
-     box-shadow: -21px 22px 10px #2d2d2d69;
-     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-       top: 7%;
-       left: 5%;
-       box-shadow: -21px 10px 10px #2d2d2d3b;
-       position: relative;
-     }
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
    }
 `;
 
@@ -261,20 +307,28 @@ export const ImageContainer = styled.div`
 export const AnimatedHeader = styled.h4`
    color: #292929;
    padding-left: 8rem;
+   display: none;
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       padding-left: 1rem;
       font-size: 1.2rem;
    }
 `;
 
+export const SectionFour = styled.h4`
+   width: 100%;
+   height: 100vh;
+`;
+
 export const ContactSection = styled.div`
    /* background-image: url("../../images/programming.jpg"); */
+   background-image: url(${contactBg});
+   background-size: cover;
    width: 100%;
    display: flex;
+   position: relative;
    justify-content: space-around;
    align-items: flex-start;
-   margin: 3rem 0;
-   background-color: #ccc;
+   margin: 0;
    padding: 5rem 9rem;
    margin-bottom: 0;
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
@@ -283,11 +337,26 @@ export const ContactSection = styled.div`
    }
 `;
 
+
+export const ContactOverlay = styled.div`
+   position: absolute;
+   top: 50%;
+   height: 100%;
+   width: 100%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: linear-gradient(${theme.colors.primary}, ${theme.colors.lightGold});
+`;
+
 export const ContactInfo = styled.div`
    flex-basis: 50%;
    padding: 2rem;
    padding-left: 10rem;
    padding-top: 3rem;
+   z-index: 1;
+   h4 {
+     color: #fff;
+   }
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       padding-left: 0;
       padding-top: 0;
@@ -298,6 +367,7 @@ export const ContactInfo = styled.div`
      padding-left: 0;
      li {
        padding: .5rem 0;
+       color: #fff;
      }
    }
 `;
@@ -308,4 +378,16 @@ export const StyledLink = styled(NavLink)`
    &:hover {
      color: ${theme.colors.primary};
    }
+`;
+
+
+export const SectionAbout = styled.div`
+    padding: 3rem 15rem;
+    border-top-right-radius: 5px;
+    text-align: center;
+`;
+
+export const SectionQuote = styled.div`
+     height: 60vh;
+     background-color: #e6e8e9;
 `;

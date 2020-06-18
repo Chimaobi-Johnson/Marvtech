@@ -56,7 +56,7 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 const StyledNavBrand = styled(NavLink)`
-      color: ${theme.colors.primary};
+      color: #fff;
       font-weight: bold;
       /* font-family: 'Share Tech', sans-serif; */
       font-size: 1.4rem;

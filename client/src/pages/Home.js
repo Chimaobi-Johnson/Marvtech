@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ContactForm from "../components/ContactForm/ContactForm";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faGoogle, faJava, faReact, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import {
   Container,
   LandingWrapper,
@@ -27,10 +27,57 @@ import {
   SectionThree,
   ContactSection,
   ContactInfo,
-  StyledLink
+  StyledLink,
+  PolygonOne,
+  PolygonTwo,
+  ContactOverlay,
+  SectionFour,
+  StyledSpan,
+  MoreButton,
+  Text,
+  Title,
+  ArrowLeftBtn,
+  ArrowRightBtn,
+  SectionAbout,
+  SectionQuote
 } from "../components/HomeComponents/HomeComponents";
+import { CSSTransitionGroup } from 'react-transition-group';
 
 const Home = props => {
+
+//    useEffect(() => {
+//      window.onscroll = function() {myFunction()};
+//
+// function myFunction() {
+//  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+//    document.getElementById("arrowOne").className = "animate__animated animate__fadeInRight";
+//    document.getElementById("arrowTwo").className = "animate__animated animate__fadeInRight animate__delay-1s";
+//  }
+// }
+//    }, [])
+
+const webInfo = {
+  title: "Web Design & Development",
+  content: "is at the core of a great digital presence. If your branding is missing clarity and meaning or needs a little beauty lift, our team is here to help. Creating the entire brand identity of a business is an exciting task, and we can build out all aspects covering the logo/mark",
+  link: "/web-design"
+}
+
+const mobileInfo = {
+  title: "Mobile Application Development",
+  content: "lfkm lgk ssgp bsombs gbos sogmboirt siob ibgmis biso bs bjosnb;snb;snbsnb s;o bsobmsoin bos bsobs obmsobb obns boinsr bonit iombnwiob otbnoitb obos tib osi boi sot boit",
+  link: "/mobile-design"
+}
+
+
+  const [ currentService, setCurrentService ] = useState(webInfo);
+
+  const nextService = () => {
+    if(currentService === webInfo) {
+        setCurrentService(mobileInfo);
+    } else {
+        setCurrentService(webInfo)
+    }
+  }
 
   return (
      <Container>
@@ -48,7 +95,26 @@ const Home = props => {
              <StyledButton outline>Learn More</StyledButton>
           </LandingTextBox>
         </LandingWrapper>
+        <SectionAbout>
+            <div>
+                  <h2 id="aboutHeading">WHY WE ARE HERE</h2>
+                  <p>
+We believe everyday life should be easy not complex- complexity is a time killer!
+There is so much hardship in Nigeria/Africa stemming from challenges we are fully aware of and as a result of this many businesses have failed to scale and continue to operate primitive systems that are alien to this fast paced world.This challenge is more pronounced with SMEs in education, health, and business- little wonder why the continent is on a slow crawl (baby walk) to development.
+Having observed the tech scene for a while, we can say that software solutions are relatively expensive and only a hand full of the populace can comfortably afford them.
+We saw a need for a divergent kind of technology, and it was crystal clear it would take a divergent company to build it.
+                  </p>
+            </div>
+        </SectionAbout>
         <SectionOne>
+           <CSSTransitionGroup
+              transitionName="example"
+              transitionAppear={true}
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
+              <PolygonOne id="arrowOne" className="animate__animated animate__fadeInLeft animate__delay-2s" key={Date.now()} />
+           </CSSTransitionGroup>
+            <PolygonTwo id="arrowTwo" className="animate__animated animate__fadeInRight animate__delay-1s" />
             <SectionOneText>
               <h2>Easier Access to Software </h2>
               <p>Most sectors in Nigeria and Africa as a whole have
@@ -56,7 +122,7 @@ const Home = props => {
               make their operations easier. At Marvis Technologies our core focus is to build
               software solutions that will allow these industries manage their data, decisions, and operations
               without having to spend a fortune.</p>
-              <p>By targeting organizations who cannot afford sophisticated software, we aim to introduce cheaper
+              <p>By targeting organizations who cannot afford sophisticated software, we aim to introduce affordable
               software solutions to these organization through our platform</p>
             </SectionOneText>
             <SectionOnePicture>
@@ -70,64 +136,40 @@ const Home = props => {
         </SectionOne>
         <SectionTwo>
             <SectionTwoText>
-               <h2>Our Services </h2>
-               <p>We also offer other services which include web design and development,
-                 mobile application design and development. click here to learn more about our projects
+               <h2>Other Services </h2>
+               <p>We offer affordable software solutions to SMEs to manage their activities on the go through
+               web and mobile app development
                </p>
             </SectionTwoText>
         </SectionTwo>
         <SectionThree>
-            <MarvisBackground>
-              <h1>MARVIS</h1>
-            </MarvisBackground>
-            <AnimatedHeader>
-              <span className="animate__animated animate__fadeInLeft">THINK > </span>
-              <span className="animate__animated animate__fadeInLeft animate__delay-1s">CREATE > </span>
-              <span className="animate__animated animate__fadeInLeft animate__delay-2s">INNOVATE</span>
-            </AnimatedHeader>
-            <Services>
 
+            <Services>
+            <ArrowLeftBtn onClick={nextService}><FontAwesomeIcon icon={faArrowLeft} size="sm" /></ArrowLeftBtn>
+            <ArrowRightBtn onClick={nextService}><FontAwesomeIcon icon={faArrowRight} size="sm" /></ArrowRightBtn>
                <ServicesLeft>
-                <BlockOne>
-                    <IconBox></IconBox>
-                    <ContentBox>
-                      <h4><StyledLink to="/web-design">Web Design</StyledLink></h4>
-                      <p>We design websites using content management systems
-                      We design websites using content management systems
-                      </p>
-                    </ContentBox>
-                </BlockOne>
-                <BlockOne>
-                    <IconBox></IconBox>
-                    <ContentBox>
-                      <h4><StyledLink to="/web-development">Web Application Development</StyledLink></h4>
-                      <p>We design websites using content management systems
-                      We design websites using content management systems
-                      </p>
-                    </ContentBox>
-                </BlockOne>
-                <BlockOne>
-                    <IconBox></IconBox>
-                    <ContentBox>
-                      <h4><StyledLink to="/mobile-design">Mobile Application Development</StyledLink></h4>
-                      <p>We design websites using content management systems
-                      We design websites using content management systems
-                      </p>
-                    </ContentBox>
-                </BlockOne>
               </ServicesLeft>
 
               <ServicesRight>
-                   <ImageContainer>
-                        <img src={require("../images/notebook.jpg")}
-                         alt="#" />
-                   </ImageContainer>
+              <div>
+              <StyledSpan>
+                 What We Do
+              </StyledSpan>
+              <Title>{currentService.title}</Title>
+              <Text>
+                {currentService.content}
+               </Text>
+              <MoreButton>Learn More</MoreButton>
+              </div>
               </ServicesRight>
             </Services>
 
         </SectionThree>
 
+        <SectionQuote>
+        </SectionQuote>
         <ContactSection>
+            <ContactOverlay />
             <ContactInfo>
                <h4>Reach us quickly!</h4>
                <ul>

@@ -3,6 +3,12 @@ import {
   MEDIUM_BLUE,
   DARK_BLUE,
   PURPLE,
+  LIGHTERGREEN,
+  LIGHTGREEN,
+  MEDIUMGREEN,
+  LIGHTBROWN,
+  GOLD,
+  LIGHTGOLD
 } from "./colors";
 
 const theme = {
@@ -29,7 +35,13 @@ const theme = {
     primary: PRIMARY,
     mediumBlue: MEDIUM_BLUE,
     darkBlue: DARK_BLUE,
-    purple: PURPLE
+    purple: PURPLE,
+    lighterGreen: LIGHTERGREEN,
+    lightGreen: LIGHTGREEN,
+    mediumGreen: MEDIUMGREEN,
+    lightBrown: LIGHTBROWN,
+    gold: GOLD,
+    lightGold: LIGHTGOLD
   }
 };
 
