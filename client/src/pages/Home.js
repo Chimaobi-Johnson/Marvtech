@@ -3,6 +3,8 @@ import ContactForm from "../components/ContactForm/ContactForm";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faJava, faReact, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Fade from 'react-reveal/Fade';
+
 import {
   Container,
   LandingWrapper,
@@ -96,6 +98,7 @@ const mobileInfo = {
           </LandingTextBox>
         </LandingWrapper>
         <SectionAbout>
+           <Fade bottom>
             <div>
                   <h2 id="aboutHeading">WHY WE ARE HERE</h2>
                   <p>
@@ -105,16 +108,11 @@ Having observed the tech scene for a while, we can say that software solutions a
 We saw a need for a divergent kind of technology, and it was crystal clear it would take a divergent company to build it.
                   </p>
             </div>
+            </Fade>
         </SectionAbout>
         <SectionOne>
-           <CSSTransitionGroup
-              transitionName="example"
-              transitionAppear={true}
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={300}>
-              <PolygonOne id="arrowOne" className="animate__animated animate__fadeInLeft animate__delay-2s" key={Date.now()} />
-           </CSSTransitionGroup>
-            <PolygonTwo id="arrowTwo" className="animate__animated animate__fadeInRight animate__delay-1s" />
+            // <PolygonOne id="arrowOne" className="animate__animated animate__fadeInLeft animate__delay-2s" key={Date.now()} />
+            <PolygonTwo />
             <SectionOneText>
               <h2>Easier Access to Software </h2>
               <p>Most sectors in Nigeria and Africa as a whole have
@@ -136,10 +134,12 @@ We saw a need for a divergent kind of technology, and it was crystal clear it wo
         </SectionOne>
         <SectionTwo>
             <SectionTwoText>
+               <Fade>
                <h2>Other Services </h2>
                <p>We offer affordable software solutions to SMEs to manage their activities on the go through
                web and mobile app development
                </p>
+               </Fade>
             </SectionTwoText>
         </SectionTwo>
         <SectionThree>
@@ -148,6 +148,7 @@ We saw a need for a divergent kind of technology, and it was crystal clear it wo
             <ArrowLeftBtn onClick={nextService}><FontAwesomeIcon icon={faArrowLeft} size="sm" /></ArrowLeftBtn>
             <ArrowRightBtn onClick={nextService}><FontAwesomeIcon icon={faArrowRight} size="sm" /></ArrowRightBtn>
                <ServicesLeft>
+                 <img src={require("../images/portfolios.jpg")} alt="web design" />
               </ServicesLeft>
 
               <ServicesRight>

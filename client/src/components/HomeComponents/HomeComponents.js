@@ -1,10 +1,14 @@
+import React from "react";
 import styled from "styled-components";
 import { Button } from "shards-react";
 import { NavLink } from "react-router-dom";
+import withReveal from "react-reveal";
+import Fade from 'react-reveal/Fade';
 import { theme, mq } from "../../constants/theme";
 import contactBg from '../../images/charles.jpg';
 import laptopImage from "../../images/silver-laptop.jpg";
 import womanWriting from "../../images/woman-writing.jpg";
+
 const { small, xxxlarge } = theme.typography.size;
 
 export const Container = styled.div`
@@ -101,7 +105,7 @@ export const PolygonOne = styled.div`
    z-index: -1;
 `;
 
-export const PolygonTwo = styled.div`
+export const PolygonTwo = withReveal(styled.div`
    background-image: linear-gradient(260deg,rgba(23, 23, 23, 0.3),#3e94f2), url(${womanWriting});
    background-size: cover;
    clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0% 50%);
@@ -111,7 +115,7 @@ export const PolygonTwo = styled.div`
    right: 0;
    width: 55%;
    z-index: -1;
-`;
+`, <Fade right/>)
 
 export const SectionOneText = styled.div`
    flex-basis: 67%;
@@ -161,7 +165,7 @@ export const SectionOnePicture = styled.div`
 
 export const SectionTwo = styled.div`
    align-items: center;
-   background-color: #fff;
+   background-color: #292929;
    padding: 4rem 0;
    border-left: .3rem solid #292929;
 `;
@@ -173,12 +177,14 @@ export const SectionTwoText = styled.div`
    width: 50%;
    margin: 0 auto;
    text-align: center;
+   color: #fbfbfb;
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       text-align: center;
       padding-right: 0;
       width: 70%;
    }
    h2 {
+     color:#fff;
      text-align: center;
      @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
         text-align: center;
@@ -213,7 +219,6 @@ export const Services = styled.div`
     height: 100vh;
     background-color: #fbfbfb;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23a4a4a4' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    border-top: 1px solid #ccc;
     /* @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
        display: block;
     } */
@@ -258,8 +263,25 @@ export const ArrowRightBtn = styled(Button)`
 
 export const ServicesLeft = styled.div`
     flex-basis: 50%;
+    background-color: #fff;
+    img {
+      width: 100%;
+      height: 84%;
+      margin-top: 8%;
+    }
+    /* position: relative;
     background-size: cover;
-    background-image: linear-gradient(260deg,#9d9c9c17,#31313173), url(${laptopImage});
+    padding: 4rem;
+    background-image: linear-gradient(260deg,#9d9c9c17,#31313173), url(${laptopImage}); */
+    /* div {
+      position: absolute;
+      top: -2rem;
+      left: -20rem;
+      width: 100%;
+      padding: 1rem;
+      background-color: #4191ea;
+      transform: rotate(90deg);
+    } */
 `;
 
 export const StyledSpan = styled.span`
@@ -303,7 +325,6 @@ export const ImageContainer = styled.div`
    }
 `;
 
-
 export const AnimatedHeader = styled.h4`
    color: #292929;
    padding-left: 8rem;
@@ -321,7 +342,8 @@ export const SectionFour = styled.h4`
 
 export const ContactSection = styled.div`
    /* background-image: url("../../images/programming.jpg"); */
-   background-image: url(${contactBg});
+   /* linear-gradient(to right,#000000db,#4192e996), url(/static/media/charles.2a5b88ea.jpg) */
+   background-image: linear-gradient(to right, #000000db,#4192e996), url(${contactBg});
    background-size: cover;
    width: 100%;
    display: flex;
@@ -339,13 +361,13 @@ export const ContactSection = styled.div`
 
 
 export const ContactOverlay = styled.div`
-   position: absolute;
+   /* position: absolute;
    top: 50%;
    height: 100%;
    width: 100%;
    left: 50%;
    transform: translate(-50%, -50%);
-   background-color: linear-gradient(${theme.colors.primary}, ${theme.colors.lightGold});
+   background-color: linear-gradient(${theme.colors.primary}, ${theme.colors.lightGold}); */
 `;
 
 export const ContactInfo = styled.div`
@@ -382,9 +404,13 @@ export const StyledLink = styled(NavLink)`
 
 
 export const SectionAbout = styled.div`
-    padding: 3rem 15rem;
+    padding: 11rem 13rem;
     border-top-right-radius: 5px;
     text-align: center;
+    background-color: #fff;
+    p {
+      font-size: 1.2rem;
+    }
 `;
 
 export const SectionQuote = styled.div`

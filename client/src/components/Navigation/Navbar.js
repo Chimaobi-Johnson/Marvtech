@@ -33,6 +33,10 @@ const StyledNavbar = styled(Navbar)`
    top: 0;
    left: 0;
    transition: all .7s;
+   padding: 0.1rem 1.5rem;
+   border-bottom: none;
+   background-color: #1e2022;
+   /* background-color: #4190e8;   */
    .navbar-toggler {
        border: 1px solid #9e9e9eb8;
        background-color: transparent;
