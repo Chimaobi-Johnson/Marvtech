@@ -35,7 +35,6 @@ const StyledNavbar = styled(Navbar)`
    transition: all .7s;
    padding: 0.1rem 1.5rem;
    border-bottom: none;
-   background-color: #1e2022;
    /* background-color: #4190e8;   */
    .navbar-toggler {
        border: 1px solid #9e9e9eb8;
@@ -54,7 +53,7 @@ const StyledNavLink = styled(NavLink)`
     text-decoration: none;
     color: #fff;
     &:hover {
-      color: ${theme.colors.primary};
+      color: #04a1ff;
       text-decoration: none;
     }
 `;
@@ -62,8 +61,8 @@ const StyledNavLink = styled(NavLink)`
 const StyledNavBrand = styled(NavLink)`
       color: #fff;
       font-weight: bold;
-      /* font-family: 'Share Tech', sans-serif; */
-      font-size: 1.4rem;
+      font-family: sans-serif;
+      font-size: 1.2rem;
       text-transform: uppercase;
       padding-top: .625rem;
       padding-bottom: .625rem;
@@ -79,6 +78,8 @@ const StyledNavBrand = styled(NavLink)`
 const StyledNavItem = styled(NavItem)`
       font-weight: 500;
       text-transform: uppercase;
+      font-size: 1rem;
+      font-family: 'Share Tech', sans-serif;
 `;
 
 

@@ -1,0 +1,13 @@
+/* 00b7ff */
+.custom-polygon {
+  /* background-image: linear-gradient(260deg, rgba(23, 23, 23, 0.7), #1c2644), url("../../images/woman-writing.jpg"); */
+  background-image: linear-gradient(260deg, rgba(23, 23, 23, 0.76), #8cc5d2e3), url("../../images/woman-writing.jpg");
+  background-size: cover;
+  clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0% 50%);
+  position: absolute;
+  height: 100vh;
+  top: 0%;
+  right: 0;
+  width: 55%;
+  z-index: 0;
+}

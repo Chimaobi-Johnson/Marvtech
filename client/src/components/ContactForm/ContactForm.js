@@ -17,6 +17,10 @@ export const FormContainer = styled.div`
    }
 `;
 
+export const SubmitButton = styled(Button)`
+   border-radius: 0
+`;
+
 const ContactForm = props => {
 
   return (
@@ -42,7 +46,7 @@ const ContactForm = props => {
            <label htmlFor="#message">Message</label>
            <FormTextarea />
          </FormGroup>
-         <Button outline>Send</Button>
+         <SubmitButton outline>Send</SubmitButton>
      </Form>
     </FormContainer>
   )

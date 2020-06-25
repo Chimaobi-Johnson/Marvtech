@@ -8,6 +8,7 @@ import { theme, mq } from "../../constants/theme";
 import contactBg from '../../images/charles.jpg';
 import laptopImage from "../../images/silver-laptop.jpg";
 import womanWriting from "../../images/woman-writing.jpg";
+import laptopTech from "../../images/business-charts.jpg";
 
 const { small, xxxlarge } = theme.typography.size;
 
@@ -37,7 +38,9 @@ export const VideoOverlay = styled.div`
    top: 49%;
    left: 50%;
    transform: translate(-50%, -50%);
-   background-color: #0a0a0aab; /*#04a5f4*/;
+   /* background-color: #1f2641f0; */
+   /* background-color: #04a1ffe3; */
+   background-color: #0a0a0aab; /*#04a5f4
    /* background-image: linear-gradient(180deg, #0087ff00 0%, #007cff80 25%, #0087ffc2 70%, #007aff 100%); */
 `;
 
@@ -49,6 +52,9 @@ export const LandingTextBox = styled.div`
    top: 40%;
    right: 8%;
    font-size: 1.1rem;
+   div {
+     letter-spacing: .5px;
+   }
    /* transform: translate(-50%, -50%); */
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       width: 62%;
@@ -77,126 +83,15 @@ export const LandingTextBox = styled.div`
    }
 `;
 
-export const SectionOne = styled.div`
-   display: flex;
-   align-items: center;
-   width: 100%;
-   position: relative;
-   justify-content: space-between;
-   padding: 4rem 2rem;
-   height: 100vh;
-   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-      display: block;
-      margin: 4rem 0;
-   }
-
-`;
-
-export const PolygonOne = styled.div`
-   background-color: ${theme.colors.purple};
-   clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0% 50%);
-   /* clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 33% 49%, 0% 0%); */
-   position: absolute;
-   top: 14%;
-   right: 0;
-   width: 40%;
-   height: 70%;
-   display: none;
-   z-index: -1;
-`;
-
-export const PolygonTwo = withReveal(styled.div`
-   background-image: linear-gradient(260deg,rgba(23, 23, 23, 0.3),#3e94f2), url(${womanWriting});
-   background-size: cover;
-   clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0% 50%);
-   position: absolute;
-   height: 100vh;
-   top: 0%;
-   right: 0;
-   width: 55%;
-   z-index: -1;
-`, <Fade right/>)
-
-export const SectionOneText = styled.div`
-   flex-basis: 67%;
-   padding-left: 7rem;
-   padding-right: 10rem;
-   font-size: 1.1rem;
-   line-height: 1.7;
-   color: #000;
-   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-      line-height: 1.5;
-      border-right: none;
-      padding-left: 1rem;
-      padding-right: 5rem;
-   }
-
-   h2 {
-     text-align: left;
-     color: #000;
-     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-        font-size: 1.7rem;
-     }
-   }
-   position: relative;
-`;
-
-export const SectionOnePicture = styled.div`
-   flex-basis: 30%;
-   ul {
-     margin-left: 3rem;
-     list-style-type: square;
-     margin-top: 2rem;
-     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-        margin-left: 0;
-     }
-     li {
-       font-size: 1.1rem;
-       padding: 1rem 0;
-       a {
-         color: #fff;
-         &:hover {
-           color: ${theme.colors.mediumBlue};
-         }
-       }
-     }
-   }
-`;
-
-export const SectionTwo = styled.div`
-   align-items: center;
-   background-color: #292929;
-   padding: 4rem 0;
-   border-left: .3rem solid #292929;
-`;
-
-export const SectionTwoText = styled.div`
-   padding-right: 3rem;
-   font-size: 1.1rem;
-   line-height: 1.7;
-   width: 50%;
-   margin: 0 auto;
-   text-align: center;
-   color: #fbfbfb;
-   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-      text-align: center;
-      padding-right: 0;
-      width: 70%;
-   }
-   h2 {
-     color:#fff;
-     text-align: center;
-     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-        text-align: center;
-     }
-   }
-`;
 
 
 export const StyledButton = styled(Button)`
-     border-color: ${theme.colors.primary};
-     color: ${theme.colors.primary};
+     border-color: #04a1ff;
+     color: #04a1ff;
      border-radius: 0;
+     &:hover {
+       background-color: #04a1ff;
+     }
      @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
         display: none;
      }
@@ -226,11 +121,11 @@ export const Services = styled.div`
 
 export const ServicesRight = styled.div`
     flex: 1;
+    background-color: aliceblue;
     padding: 5rem 7rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #fff;
 `;
 
 
@@ -263,7 +158,6 @@ export const ArrowRightBtn = styled(Button)`
 
 export const ServicesLeft = styled.div`
     flex-basis: 50%;
-    background-color: #fff;
     img {
       width: 100%;
       height: 84%;
@@ -340,59 +234,6 @@ export const SectionFour = styled.h4`
    height: 100vh;
 `;
 
-export const ContactSection = styled.div`
-   /* background-image: url("../../images/programming.jpg"); */
-   /* linear-gradient(to right,#000000db,#4192e996), url(/static/media/charles.2a5b88ea.jpg) */
-   background-image: linear-gradient(to right, #000000db,#4192e996), url(${contactBg});
-   background-size: cover;
-   width: 100%;
-   display: flex;
-   position: relative;
-   justify-content: space-around;
-   align-items: flex-start;
-   margin: 0;
-   padding: 5rem 9rem;
-   margin-bottom: 0;
-   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-      display: block;
-      padding: 2rem;
-   }
-`;
-
-
-export const ContactOverlay = styled.div`
-   /* position: absolute;
-   top: 50%;
-   height: 100%;
-   width: 100%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   background-color: linear-gradient(${theme.colors.primary}, ${theme.colors.lightGold}); */
-`;
-
-export const ContactInfo = styled.div`
-   flex-basis: 50%;
-   padding: 2rem;
-   padding-left: 10rem;
-   padding-top: 3rem;
-   z-index: 1;
-   h4 {
-     color: #fff;
-   }
-   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-      padding-left: 0;
-      padding-top: 0;
-      padding: 2rem;
-   }
-   ul {
-     list-style: none;
-     padding-left: 0;
-     li {
-       padding: .5rem 0;
-       color: #fff;
-     }
-   }
-`;
 
 export const StyledLink = styled(NavLink)`
    text-decoration: none;
@@ -404,16 +245,22 @@ export const StyledLink = styled(NavLink)`
 
 
 export const SectionAbout = styled.div`
+ /* linear-gradient(to right, #1c1c1cdb,#df752854), */
+    background-image: linear-gradient(#fff, #ffffff5e), url(${laptopTech});
+    background-size: cover;
     padding: 11rem 13rem;
     border-top-right-radius: 5px;
     text-align: center;
     background-color: #fff;
+    h2 {
+      font-size: 1.8rem;
+      color: #000;
+    }
     p {
       font-size: 1.2rem;
+      color: #000;
+      line-height: 2rem;
+      letter-spacing: .5px;
+      text-align: left;
     }
-`;
-
-export const SectionQuote = styled.div`
-     height: 60vh;
-     background-color: #e6e8e9;
 `;
