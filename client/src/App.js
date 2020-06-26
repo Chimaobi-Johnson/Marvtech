@@ -8,7 +8,7 @@ import Pricing from "./pages/Pricing";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer/Footer";
-import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Home from './pages/Home';
 import './App.css';
 

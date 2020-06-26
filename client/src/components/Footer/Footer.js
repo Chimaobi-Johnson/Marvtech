@@ -1,12 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "shards-react";
 import { NavLink } from "react-router-dom";
-import { theme, mq } from "../../constants/theme";
+import { mq } from "../../constants/theme";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faGoogle, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
-
-const { small, xxxlarge } = theme.typography.size;
 
 const Wrapper = styled.div`
    width: 100%;

@@ -1,16 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "shards-react";
-import { NavLink } from "react-router-dom";
 import Fade from 'react-reveal/Fade';
-import { theme, mq } from "../../constants/theme";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faJava, faReact, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
-import contactBg from '../../images/charles.jpg';
-import laptopImage from "../../images/silver-laptop.jpg";
-import womanWriting from "../../images/woman-writing.jpg";
-
-const { small, xxxlarge } = theme.typography.size;
+import { mq } from "../../constants/theme";
 
 
 export const Wrapper = styled.div`
@@ -52,12 +43,12 @@ export const SectionTwoIcon = styled.div`
      display: flex;
      align-items: center;
      margin-left: 15rem;
-     div {
+     /* div {
        padding-left: 1rem;
      }
      svg {
        font-size: 2rem;
-     }
+     } */
    }
 `;
 
@@ -74,9 +65,7 @@ const SectionTwo = props => (
       <SectionTwoIcon>
          <Fade>
            <div className="iconBox">
-              <div><FontAwesomeIcon icon={faCss3Alt} size="sm" /></div>
-              <div><FontAwesomeIcon icon={faReact} size="sm" /></div>
-              <div><FontAwesomeIcon icon={faJava} size="sm" /></div>
+
            </div>
          </Fade>
       </SectionTwoIcon>

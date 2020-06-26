@@ -2,28 +2,16 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { theme } from "../../constants/theme";
 import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  FormInput,
   Collapse
 } from "shards-react";
 
 import "./Navbar.css";
 
-
-const { xxsmall, xsmall, small, large } = theme.typography.size;
 
 
 const StyledNavbar = styled(Navbar)`
@@ -89,7 +77,6 @@ const NavigationBar = props => {
     window.onscroll = function() {updateHeader()};
 
     const header = document.getElementById("navheader");
-    const sticky = header.offsetTop;
 
     function updateHeader() {
       if (window.pageYOffset > 200) {

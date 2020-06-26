@@ -1,11 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "shards-react";
 import { NavLink } from "react-router-dom";
-import { theme, mq } from "../../constants/theme";
-
-const { small, xxxlarge } = theme.typography.size;
-
 
 const Wrapper = styled.div`
    width: 100%;

@@ -1,17 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "shards-react";
 import ContactForm from "../ContactForm/ContactForm";
-import { NavLink } from "react-router-dom";
-import Fade from 'react-reveal/Fade';
 import { theme, mq } from "../../constants/theme";
 import contactBg from '../../images/charles.jpg';
-import laptopImage from "../../images/silver-laptop.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faJava, faReact, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
-const { small, xxxlarge } = theme.typography.size;
 
 
 export const Wrapper = styled.div`

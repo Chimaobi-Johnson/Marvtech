@@ -1,15 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "shards-react";
 import { NavLink } from "react-router-dom";
-import withReveal from "react-reveal";
 import Fade from 'react-reveal/Fade';
 import { theme, mq } from "../../constants/theme";
-import contactBg from '../../images/charles.jpg';
-import laptopImage from "../../images/silver-laptop.jpg";
-import womanWriting from "../../images/woman-writing.jpg";
 import "./SectionOne.css";
-const { small, xxxlarge } = theme.typography.size;
 
 
 export const Wrapper = styled.div`

@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Form, FormInput, FormTextarea, FormGroup, Button } from "shards-react";
 
-import { theme } from "../../constants/theme";
-const { small, xxxlarge } = theme.typography.size;
 
 export const FormContainer = styled.div`
    flex-basis: 40%;

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "shards-react";
 import Fade from 'react-reveal/Fade';
 
 
