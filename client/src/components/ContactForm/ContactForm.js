@@ -22,7 +22,7 @@ export const SubmitButton = styled(Button)`
 const ContactForm = props => {
 
   return (
-    <FormContainer>
+    <FormContainer id="contact">
      <Form>
        <FormGroup>
          <label htmlFor="#name">Full Name</label>

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import kekeBg from "../../images/keke.jpg";
+
 
 const Wrapper = styled.div`
    width: 100%;
@@ -11,6 +13,7 @@ const CoverImageContainer = styled.div`
     width: 100%;
     height: 70vh;
     position: relative;
+    background-image: linear-gradient(#202020, #202020ad), url(${kekeBg});
     img {
       width: 100%;
       height: 100%;
@@ -82,8 +85,6 @@ const AboutLayout = props => {
   return (
      <Wrapper>
         <CoverImageContainer>
-          <BackgroundOverlay />
-          <img src={require("../../images/macpro.jpg")} alt="cover_image" />
           <CoverText>
              <h1>{props.covername}</h1>
              <p>{props.coverdescr}</p>

@@ -25,7 +25,8 @@ export const VideoOverlay = styled.div`
    transform: translate(-50%, -50%);
    /* background-color: #1f2641f0; */
    /* background-color: #04a1ffe3; */
-   background-color: #0a0a0aab; /*#04a5f4
+   /* #778899 #1fa6dbab */
+   background-color: #55555591; /*#04a5f4
    /* background-image: linear-gradient(180deg, #0087ff00 0%, #007cff80 25%, #0087ffc2 70%, #007aff 100%); */
 `;
 
@@ -35,8 +36,14 @@ export const LandingTextBox = styled.div`
    position: absolute;
    z-index: 500;
    top: 40%;
-   right: 8%;
+   left: 8%;
    font-size: 1.1rem;
+   transition: all .5s;
+   padding: 2rem 0 2rem 2rem;
+   border: 2px solid #404646b5;
+   &:hover {
+     border: 2px solid #2f9dc7;
+   }
    div {
      letter-spacing: .5px;
    }
@@ -49,7 +56,7 @@ export const LandingTextBox = styled.div`
    }
 
    h2 {
-    color: #fff;
+    color: #292929;
     font-size: 2.2rem;
     text-transform: uppercase;
     letter-spacing: .5rem;
@@ -65,17 +72,39 @@ export const LandingTextBox = styled.div`
      font-weight: 500;
      color: #fff;
      margin-bottom: 1.5rem;
+     padding-right: 5rem;
    }
 `;
 
 
+export const FadedSideBox = styled.div`
+   width: 78%;
+   height: 100%;
+   position: absolute;
+   z-index: 250;
+   top: 0;
+   left: 0;
+   background-image: linear-gradient(to right, #1fa6db, #1fa6db00);
+`;
+
+export const SideBox = styled.div`
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    z-index: 250;
+    top: 0;
+    left: 0;
+    background-color: #1fa6dbd4;
+`;
+
 
 export const StyledButton = styled(Button)`
-     border-color: #04a1ff;
-     color: #04a1ff;
+     border-color: rgb(247, 247, 247);
+     color: rgb(229, 233, 236);
      border-radius: 0;
      &:hover {
-       background-color: #04a1ff;
+       background-color: rgb(247, 247, 247);
+       color: #292929;
      }
      @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
         display: none;
@@ -83,14 +112,16 @@ export const StyledButton = styled(Button)`
 
 `;
 
+
+
 const Landing = props => (
   <Wrapper>
-      <VideoOverlay />
+      <SideBox />
       <Video autoPlay muted loop>
         <source src={require("../../video/landing-video.mp4")} type="video/mp4" />
       </Video>
       <LandingTextBox>
-         <h2>Software and Innova<span style={{ color: "#04a1ff" }}>t</span>ion</h2>
+         <h2>Software and Innova<span style={{ color: "rgb(229, 233, 236)" }}>t</span>ion</h2>
          <div>Through our software platform and custom application development
          we aim to drive change in the health,
          business and educational sectors

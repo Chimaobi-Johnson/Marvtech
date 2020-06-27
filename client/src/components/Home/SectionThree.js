@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
        background-color: #fff;
        width: 40%;
        padding: 2rem;
+       box-shadow: 2px 2px 49px #8d8b8b;
        h2 {
          text-transform: uppercase;
          font-size: 1.52rem;

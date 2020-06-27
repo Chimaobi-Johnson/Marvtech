@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-
+import servicesBg from "../../images/portfolios.jpg";
 
 const Wrapper = styled.div`
    width: 100%;
@@ -12,6 +12,8 @@ const CoverImageContainer = styled.div`
     width: 100%;
     height: 70vh;
     position: relative;
+    background-attachment: fixed;
+    background-image: linear-gradient(#202020, #202020ad), url(${servicesBg});
     img {
       width: 100%;
       height: 100%;
@@ -51,13 +53,18 @@ const CoverText = styled.div`
 `;
 
 const ContentContainer = styled.div`
-    display: flex;
+    /* display: flex; */
     padding: 4rem 1rem;
     padding-bottom: 25rem;
 `;
 
 const ContentSideBar = styled.div`
-     flex-basis: 25%;
+     width: 25%;
+     position: absolute;
+     top: 53%;
+     background-color: #fff;
+     box-shadow: 1px 2px 100px #39393957;
+     padding: 2rem 1rem;
      border-right: 1px solid #d7d7d7;
     ul {
       list-style: none;
@@ -68,7 +75,6 @@ const ContentSideBar = styled.div`
 `;
 
 const ContentMain = styled.div`
-    flex: 1;
     padding: 2rem 4rem;
 `;
 
@@ -83,8 +89,6 @@ const ServicesLayout = props => {
   return (
      <Wrapper>
         <CoverImageContainer>
-          <BackgroundOverlay />
-          <img src={require("../../images/macpro.jpg")} alt="cover_image" />
           <CoverText>
              <h1>{props.covername}</h1>
              <p>{props.coverdescr}</p>

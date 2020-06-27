@@ -36,10 +36,11 @@ const StyledCollapse = styled(Collapse)`
     justify-content: flex-end;
 `;
 
-const StyledNavLink = styled(NavLink)`
+const StyledNavLink = styled.a`
     padding: 0 .8rem;
     text-decoration: none;
     color: #fff;
+    font-weight: bold;
     &:hover {
       color: #04a1ff;
       text-decoration: none;
@@ -107,27 +108,27 @@ const NavigationBar = props => {
        <StyledCollapse open={collapseOpen} navbar>
          <Nav navbar>
            <StyledNavItem>
-             <StyledNavLink active to="/">
+             <StyledNavLink active href="/">
                Home
              </StyledNavLink>
            </StyledNavItem>
            <StyledNavItem>
-             <StyledNavLink to="/about">
+             <StyledNavLink href="/about">
                About
              </StyledNavLink>
            </StyledNavItem>
            <StyledNavItem>
-             <StyledNavLink to="/services">
+             <StyledNavLink href="/services">
                Services
              </StyledNavLink>
            </StyledNavItem>
            <StyledNavItem>
-             <StyledNavLink to="/get-a-quote">
-               Get Quote
+             <StyledNavLink href="/get-a-quote">
+               Get a Quote
              </StyledNavLink>
            </StyledNavItem>
            <StyledNavItem>
-             <StyledNavLink to="/contact">
+             <StyledNavLink href="#contact">
                Contact
              </StyledNavLink>
            </StyledNavItem>
