@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import servicesBg from "../../images/portfolios.jpg";
+import servicesBg from "../../images/mockup2.jpg";
 
 const Wrapper = styled.div`
    width: 100%;
@@ -12,8 +12,9 @@ const CoverImageContainer = styled.div`
     width: 100%;
     height: 70vh;
     position: relative;
+    background-size: cover;
     background-attachment: fixed;
-    background-image: linear-gradient(#202020, #202020ad), url(${servicesBg});
+    background-image: linear-gradient(#202020bf,#01b8ff3d), url(${servicesBg});
     img {
       width: 100%;
       height: 100%;
@@ -54,8 +55,6 @@ const CoverText = styled.div`
 
 const ContentContainer = styled.div`
     /* display: flex; */
-    padding: 4rem 1rem;
-    padding-bottom: 25rem;
 `;
 
 const ContentSideBar = styled.div`
@@ -75,7 +74,7 @@ const ContentSideBar = styled.div`
 `;
 
 const ContentMain = styled.div`
-    padding: 2rem 4rem;
+
 `;
 
 const StyledNavLink = styled(NavLink)`

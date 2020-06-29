@@ -62,7 +62,8 @@ export const SectionOnePicture = styled.div`
        a {
          color: #fff;
          &:hover {
-           color: ${theme.colors.mediumBlue};
+           color: #20c0ff;
+           text-decoration: none;
          }
        }
      }
@@ -86,14 +87,14 @@ const SectionOne = props => (
         software solutions that will allow these industries manage their data, decisions, and operations
         without having to spend a fortune.</p>
         <p>By targeting organizations who cannot afford sophisticated software, we aim to introduce affordable
-        software solutions to these organization through our platform</p>
+        software solutions to these organization through our platforms</p>
       </Fade>
       </SectionOneText>
       <SectionOnePicture>
          <ul>
-            <li><a href="#">Our Services</a></li>
-            <li><a href="#">Company Description</a></li>
-            <li><a href="#">Partners</a></li>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/about">Company Description</a></li>
+            <li><a href="#industries">Industries</a></li>
             <li><a href="#">Platforms</a></li>
          </ul>
       </SectionOnePicture>

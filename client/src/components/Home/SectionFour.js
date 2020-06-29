@@ -4,25 +4,69 @@ import Fade from 'react-reveal/Fade';
 
 
 export const Wrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+  margin-bottom: 10rem;
 `;
 
 export const Heading = styled.h1`
   text-align: center;
-  padding-top: 13rem;
+  padding-top: 9rem;
+  font-size: 2rem;
+  padding-bottom: 3rem;
+`;
+
+
+export const IndustryContainer = styled.div`
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+`;
+
+
+export const IndustryBox = styled.div`
+  &:hover {
+    box-shadow: 1px 2px 50px #b9b9b9;
+  }
+  transition: .3s;
+  box-shadow: 1px 2px 50px #dddbdba8;
+  background-color: #fff;
+  flex-basis: 28%;
+  img {
+    width: 100%;
+  }
+  h6 {
+    padding: 1rem;
+    font-weight: bold;
+    background-color: #fff;
+  }
 `;
 
 
 const SectionFour = props => (
   <Wrapper>
-     <Fade>
-        <Heading>
+    <Heading>
         <Fade>
-        INDUSTRIES
+          INDUSTRIES
         </Fade>
-        </Heading>
-     </Fade>
+    </Heading>
+    <IndustryContainer>
+       <IndustryBox>
+         <img src={require("../../images/education.jpg")} alt="education" />
+         <h6>Education</h6>
+       </IndustryBox>
+       <IndustryBox>
+         <img src={require("../../images/health.jpg")} alt="health" />
+         <h6>Health</h6>
+       </IndustryBox>
+       <IndustryBox>
+         <img src={require("../../images/manufacturing.jpg")} alt="manufacturing" />
+         <h6>Manufacturing</h6>
+       </IndustryBox>
+    </IndustryContainer>
+
   </Wrapper>
 )
 

@@ -13,23 +13,13 @@ const CoverImageContainer = styled.div`
     width: 100%;
     height: 70vh;
     position: relative;
-    background-image: linear-gradient(#202020, #202020ad), url(${kekeBg});
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: linear-gradient(#202020bf,#01b8ff3d), url(${kekeBg});
     img {
       width: 100%;
       height: 100%;
     }
-`;
-
-const BackgroundOverlay = styled.div`
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    background-color: #202020;
-    opacity: 0.8;
-    z-index: 20;
 `;
 
 
@@ -53,13 +43,16 @@ const CoverText = styled.div`
 `;
 
 const ContentContainer = styled.div`
-    display: flex;
-    padding: 4rem 1rem;
-    padding-bottom: 25rem;
+
 `;
 
 const ContentSideBar = styled.div`
-     flex-basis: 20%;
+     width: 25%;
+     position: absolute;
+     top: 53%;
+     background-color: #fff;
+     box-shadow: 1px 2px 100px #39393957;
+     padding: 2rem 1rem;
      border-right: 1px solid #d7d7d7;
     ul {
       list-style: none;
@@ -70,8 +63,7 @@ const ContentSideBar = styled.div`
 `;
 
 const ContentMain = styled.div`
-    flex: 1;
-    padding: 2rem 4rem;
+
 `;
 
 const StyledNavLink = styled(NavLink)`

@@ -40,9 +40,8 @@ const StyledNavLink = styled.a`
     padding: 0 .8rem;
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
     &:hover {
-      color: #04a1ff;
+      color: #292929;
       text-decoration: none;
     }
 `;
@@ -59,13 +58,12 @@ const StyledNavBrand = styled(NavLink)`
       display: inline-block;
       text-decoration: none;
       &:hover {
-        color: ${theme.colors.mediumBlue};
+        color: #292929;
         text-decoration: none;
       }
 `;
 
 const StyledNavItem = styled(NavItem)`
-      font-weight: 500;
       text-transform: uppercase;
       font-size: 1rem;
       font-family: 'Share Tech', sans-serif;

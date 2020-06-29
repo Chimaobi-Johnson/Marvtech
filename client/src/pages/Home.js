@@ -18,8 +18,6 @@ const Home = props => {
         <SectionTwo />
         <SectionThree />
         <SectionFour />
-        <SectionQuote />
-        <ContactSection />
      </div>
   )
 }

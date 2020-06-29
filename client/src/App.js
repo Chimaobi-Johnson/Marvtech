@@ -10,6 +10,8 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer/Footer";
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Home from './pages/Home';
+import SectionQuote from "./components/Home/SectionQuote";
+import ContactSection from "./components/Home/ContactSection";
 import './App.css';
 
 const App = () => {
@@ -34,6 +36,8 @@ const App = () => {
     <div className="Main">
       <NavigationBar />
        {routes}
+      <SectionQuote />
+      <ContactSection />
       <Footer />
     </div>
   );

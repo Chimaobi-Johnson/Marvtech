@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "shards-react";
 import businessWomen from "../../images/business-women.jpg";
+import QuoteModal from "../Modals/QuoteModal";
 
 
 export const Wrapper = styled.div`
@@ -29,12 +30,31 @@ export const QuoteButton = styled(Button)`
      }
 `;
 
-const SectionQuote = props => (
+const SectionQuote = props => {
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => {
+      setOpen(true);
+    };
+
+    const handleClose = () => {
+      setOpen(false);
+    };
+
+
+  return (
   <Wrapper>
+  <QuoteModal
+    handleOpen={handleOpen}
+    handleClose={handleClose}
+    open={open}
+   />
     <div>
-     <QuoteButton className="animate__animated animate__swing animate__delay-2s animate__repeat-3">REQUEST A QUOTE NOW</QuoteButton>
+     <QuoteButton className="animate__animated animate__swing animate__delay-2s animate__repeat-3" onClick={handleOpen}>REQUEST A QUOTE NOW</QuoteButton>
     </div>
   </Wrapper>
 )
+}
 
 export default SectionQuote;

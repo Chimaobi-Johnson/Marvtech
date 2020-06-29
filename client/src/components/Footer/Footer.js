@@ -4,6 +4,33 @@ import { NavLink } from "react-router-dom";
 import { mq } from "../../constants/theme";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faGoogle, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import Modal from '@material-ui/core/Modal';
+import { makeStyles } from '@material-ui/core/styles';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+import ReactFade from 'react-reveal/Fade';
+
+const useStyles = makeStyles((theme) => ({
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    width: '45%',
+    padding: '2rem'
+  },
+}));
+
+const StyledBackdrop = styled(Backdrop)`
+   background-color: #0000008f;
+`;
+
+
 
 const Wrapper = styled.div`
    width: 100%;
@@ -66,56 +93,133 @@ const MenuContainer = styled.div`
    }
 `;
 
-const StyledNavLink = styled(NavLink)`
+const StyledNavLink = styled.a`
 
 `;
 
 
 const Footer = props => {
 
+  const classes = useStyles();
+    const [missionModal, setMissionModal] = React.useState(false);
+    const [visionModal, setVisionModal] = React.useState(false);
+
+    const missionModalOpen = () => {
+      setMissionModal(true);
+    };
+
+    const missionModalClose = () => {
+      setMissionModal(false);
+    };
+
+    const visionModalOpen = () => {
+      setMissionModal(true);
+    };
+
+    const visionModalClose = () => {
+      setMissionModal(false);
+    };
+
+    const MissionModal = () => (
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={missionModal}
+        onClose={missionModalClose}
+        closeAfterTransition
+        BackdropComponent={StyledBackdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+       <Fade in={missionModal}>
+        <div className={classes.paper}>
+          <h2 id="transition-modal-title">Our Mission</h2>
+          <p id="transition-modal-description">“To improve technological integration and innovation in
+          Nigeria and Africa by providing easier access to technology and relevant software solutions”</p>
+        </div>
+       </Fade>
+      </Modal>
+    )
+
+    const VisionModal = () => (
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={visionModal}
+        onClose={visionModalClose}
+        closeAfterTransition
+        BackdropComponent={StyledBackdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+       <Fade in={visionModal}>
+        <div className={classes.paper}>
+          <h2 id="transition-modal-title">Our Vision</h2>
+          <p id="transition-modal-description">“To be a leading provider of quality technological solutions in Nigeria and beyond”</p>
+        </div>
+       </Fade>
+      </Modal>
+    )
+
+
   return (
      <Wrapper>
+       {MissionModal()}
+       {VisionModal()}
         <FooterLeft>
           <MenuContainer>
-             <h3>Quick Links</h3>
+            <ReactFade>
+             <h3 style={{ paddingLeft: '0' }}>Quick Links</h3>
               <ul>
-                <li><StyledNavLink to="#">Home</StyledNavLink></li>
-                <li><StyledNavLink to="#">Company Description</StyledNavLink></li>
-                <li><StyledNavLink to="#">Web Design and Development</StyledNavLink></li>
-                <li><StyledNavLink to="#">Portfolios</StyledNavLink></li>
+                <li><StyledNavLink href="/">Home</StyledNavLink></li>
+                {/*
+                <li><StyledNavLink href="#">Company Description</StyledNavLink></li>
+                <li><StyledNavLink href="#">Web Design and Development</StyledNavLink></li>
+                <li><StyledNavLink href="#">Portfolios</StyledNavLink></li> */}
               </ul>
+            </ReactFade>
           </MenuContainer>
 
           <MenuContainer>
+           <ReactFade>
              <h3>Company</h3>
               <ul>
-                <li><StyledNavLink to="#">About</StyledNavLink></li>
-                <li><StyledNavLink to="#">Services</StyledNavLink></li>
-                <li><StyledNavLink to="#">Mission</StyledNavLink></li>
-                <li><StyledNavLink to="#">Contact</StyledNavLink></li>
+                <li><StyledNavLink href="/about">About Us</StyledNavLink></li>
+                <li><StyledNavLink href="/services">Services</StyledNavLink></li>
+                <li><StyledNavLink style={{ cursor: 'pointer'}} onClick={missionModalOpen}>Mission Statement</StyledNavLink></li>
+                <li><StyledNavLink style={{ cursor: 'pointer'}} onClick={visionModalOpen}>Our Vision</StyledNavLink></li>
+                <li><StyledNavLink href="#contact">Contact Us</StyledNavLink></li>
               </ul>
+            </ReactFade>
           </MenuContainer>
 
           <MenuContainer>
+            <ReactFade>
              <h3>Services</h3>
               <ul>
-                 <li><StyledNavLink to="#">Web Design and Development</StyledNavLink></li>
-                 <li><StyledNavLink to="#">Web Development</StyledNavLink></li>
-                 <li><StyledNavLink to="#">Mobile Design and Development</StyledNavLink></li>
-                 <li><StyledNavLink to="#">Mobile Development</StyledNavLink></li>
+                 <li><StyledNavLink href="/services">Web Design</StyledNavLink></li>
+                 <li><StyledNavLink href="/services">Web Development</StyledNavLink></li>
+                 <li><StyledNavLink href="/services">Mobile Application Development</StyledNavLink></li>
               </ul>
+            </ReactFade>
           </MenuContainer>
 
         </FooterLeft>
         <FooterRight>
+          <ReactFade>
             <p>+2347012191531</p>
             <ul>
-               <li><StyledNavLink to="#"><FontAwesomeIcon icon={faFacebookF} size="sm" /></StyledNavLink></li>
-               <li><StyledNavLink to="#"><FontAwesomeIcon icon={faTwitter} size="sm" /></StyledNavLink></li>
-               <li><StyledNavLink to="#"><FontAwesomeIcon icon={faGoogle} size="sm" /></StyledNavLink></li>
-               <li><StyledNavLink to="#"><FontAwesomeIcon icon={faWhatsapp} size="sm" /></StyledNavLink></li>
+               <li><StyledNavLink href="#"><FontAwesomeIcon icon={faFacebookF} size="sm" /></StyledNavLink></li>
+               <li><StyledNavLink href="#"><FontAwesomeIcon icon={faTwitter} size="sm" /></StyledNavLink></li>
+               <li><StyledNavLink href="#"><FontAwesomeIcon icon={faGoogle} size="sm" /></StyledNavLink></li>
+               <li><StyledNavLink href="#"><FontAwesomeIcon icon={faWhatsapp} size="sm" /></StyledNavLink></li>
             </ul>
             <p>&copy; Marvis Technologies</p>
+          </ReactFade>
         </FooterRight>
      </Wrapper>
   )

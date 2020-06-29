@@ -38,11 +38,11 @@ export const LandingTextBox = styled.div`
    top: 40%;
    left: 8%;
    font-size: 1.1rem;
-   transition: all .5s;
+   transition: all .3s;
    padding: 2rem 0 2rem 2rem;
-   border: 2px solid #404646b5;
+   /* border: 2px solid #404646b5; */
    &:hover {
-     border: 2px solid #2f9dc7;
+     border: 2px solid #eaeaea;
    }
    div {
      letter-spacing: .5px;
@@ -88,13 +88,23 @@ export const FadedSideBox = styled.div`
 `;
 
 export const SideBox = styled.div`
-    width: 40%;
+    .sidebox__left {
+      flex-basis: 40%;
+      background-color: #1fa6dbd4;
+      height: 100%;
+    }
+    .sidebox__right {
+      flex: 1;
+      background-color: #38aad6b3;
+      height: 100%;
+    }
+    display: flex;
+    width: 100%;
     height: 100%;
     position: absolute;
     z-index: 250;
     top: 0;
     left: 0;
-    background-color: #1fa6dbd4;
 `;
 
 
@@ -116,15 +126,17 @@ export const StyledButton = styled(Button)`
 
 const Landing = props => (
   <Wrapper>
-      <SideBox />
+      <SideBox>
+        <div className="sidebox__left"></div>
+        <div className="sidebox__right"></div>
+      </SideBox>
       <Video autoPlay muted loop>
         <source src={require("../../video/landing-video.mp4")} type="video/mp4" />
       </Video>
       <LandingTextBox>
          <h2>Software and Innova<span style={{ color: "rgb(229, 233, 236)" }}>t</span>ion</h2>
-         <div>Through our software platform and custom application development
-         we aim to drive change in the health,
-         business and educational sectors
+         <div>Through our software platforms and custom application development
+         we aim to drive change within Small and Medium Enterprises
          </div>
          <StyledButton outline>Learn More</StyledButton>
       </LandingTextBox>

@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
     }
     p {
       font-size: 1.2rem;
+      font-weight: 500;
       color: #000;
       line-height: 2rem;
       letter-spacing: .5px;
