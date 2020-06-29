@@ -81,8 +81,11 @@ const MobileDevBlock = styled.div`
 
 const MDBlockLeft = styled.div`
    flex-basis: 50%;
+   position: relative;
    img {
      width: 30%;
+     position: absolute;
+     right: 38%;
    }
 `;
 
@@ -107,25 +110,25 @@ const Testimonials = styled.div`
    }
    background-color: #242424;
    width: 100%;
-   min-height: 100vh;
+   min-height: 120vh;
 `;
 
 const TestimonialBoxContainer = styled.div`
    display: flex;
    align-items: center;
-   justify-content: space-evenly;
+   justify-content: center;
    width: 100%;
 `;
 
 const TestimonialBox = styled.div`
    &:hover {
-     transform: scale(125%);
-     box-shadow: 1px 2px 72px #020202;
+     transform: scale(115%);
+     /* box-shadow: 1px 2px 72px #020202; */
      z-index: 2;
    }
    transition: all 1s;
    border: 1px solid #ccc;
-   flex-basis: 30%;
+   flex-basis: 25%;
    background-color: #f4f7fe;
    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23a4a4a4' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 
@@ -238,17 +241,17 @@ const Services = props => {
              <p className="testimonial_text">Working with Marvtech is just great,
              my problems have been solved overnight</p>
              <HeadingLine />
-             <img src={require("../images/wogu-chimaobi-cut.jpg")} alt="" />
+             <img src={require("../images/girl-ph.jpg")} alt="" />
              <p className="testimonial_owner">Mrs Philip Etong</p>
              <p className="testimonial_position">CEO BedRock Foundation</p>
           </TestimonialBox>
 
-          <TestimonialBox style={{ transform: "scale(125%)"}}>
+          <TestimonialBox style={{ transform: "scale(115%)"}}>
              <Quote>&#8221;</Quote>
              <p className="testimonial_text">Working with Marvtech is just great,
              my problems have been solved overnight</p>
              <HeadingLine />
-             <img src={require("../images/wogu-chimaobi-cut.jpg")} alt="" />
+             <img src={require("../images/girl-ph.jpg")} alt="" />
              <p className="testimonial_owner">Mrs Philip Etong</p>
              <p className="testimonial_position">CEO BedRock Foundation</p>
           </TestimonialBox>
@@ -258,7 +261,7 @@ const Services = props => {
              <p className="testimonial_text">Working with Marvtech is just great,
              my problems have been solved overnight</p>
              <HeadingLine />
-             <img src={require("../images/wogu-chimaobi-cut.jpg")} alt="" />
+             <img src={require("../images/girl-ph.jpg")} alt="" />
              <p className="testimonial_owner">Mrs Philip Etong</p>
              <p className="testimonial_position">CEO BedRock Foundation</p>
           </TestimonialBox>

@@ -10,3 +10,7 @@
 .sticky ul li a {
   color: #fbfbfb;
 }
+
+.sticky ul li a:hover {
+  color: #1fa6db;
+}
