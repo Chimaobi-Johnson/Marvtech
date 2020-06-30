@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import kekeBg from "../../images/keke.jpg";
+import { mq } from "../../constants/theme";
 
 
 const Wrapper = styled.div`
@@ -47,6 +48,10 @@ const ContentContainer = styled.div`
 `;
 
 const ContentSideBar = styled.div`
+    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+       width: 70%;
+       top: 56%;
+    }
      width: 25%;
      position: absolute;
      top: 53%;

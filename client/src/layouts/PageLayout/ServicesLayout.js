@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import servicesBg from "../../images/mockup2.jpg";
+import { mq } from "../../constants/theme";
+
 
 const Wrapper = styled.div`
    width: 100%;
@@ -58,6 +60,10 @@ const ContentContainer = styled.div`
 `;
 
 const ContentSideBar = styled.div`
+     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+       width: 70%;
+       top: 56%;
+     }
      width: 25%;
      position: absolute;
      top: 53%;

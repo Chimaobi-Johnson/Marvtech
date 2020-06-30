@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "shards-react";
-import { theme, mq } from "../../constants/theme";
-const { small } = theme.typography.size;
+import { mq } from "../../constants/theme";
 
 export const Wrapper = styled.div`
    width: 100%;
@@ -31,7 +30,21 @@ export const VideoOverlay = styled.div`
 `;
 
 export const LandingTextBox = styled.div`
-   /* font-size: ${small}; */
+   @media (max-width: ${mq.tablet.narrow.maxWidth}) and (min-width: ${mq.tablet.narrow.minWidth}) {
+      width: 72%;
+   }
+   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+      width: 62%;
+      top: 27%;
+      font-size: .8rem;
+      right: 0;
+   }
+   @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+      padding: 2rem 0;
+      top: 47%;
+      width: 100%;
+      left: 0;
+   }
    width: 50%;
    position: absolute;
    z-index: 500;
@@ -48,13 +61,6 @@ export const LandingTextBox = styled.div`
      letter-spacing: .5px;
    }
    /* transform: translate(-50%, -50%); */
-   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-      width: 62%;
-      top: 27%;
-      font-size: .8rem;
-      right: 0;
-   }
-
    h2 {
     color: #292929;
     font-size: 2.2rem;
@@ -62,13 +68,19 @@ export const LandingTextBox = styled.div`
     letter-spacing: .5rem;
     font-weight: bold;
     line-height: 1;
+    @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+       padding-left: 1.6rem;
+    }
     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
        font-size: 1.2rem;
     }
-
    }
    div {
-     /* font-size: ${small}; */
+     @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+       color: #000;
+       padding: 1rem;
+       background-color: #ffffffeb;
+     }
      font-weight: 500;
      color: #fff;
      margin-bottom: 1.5rem;

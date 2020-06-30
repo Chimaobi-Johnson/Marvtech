@@ -173,7 +173,7 @@ const Footer = props => {
         <FooterLeft>
           <MenuContainer>
             <ReactFade>
-             <h3 style={{ paddingLeft: '0' }}>Quick Links</h3>
+             <h3 style={{ paddingLeft: '1rem' }}>Quick Links</h3>
               <ul>
                 <li><StyledNavLink href="/">Home</StyledNavLink></li>
                 {/*

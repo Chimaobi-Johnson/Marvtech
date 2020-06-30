@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ContactForm from "../ContactForm/ContactForm";
-import { theme, mq } from "../../constants/theme";
+import { mq } from "../../constants/theme";
 import contactBg from '../../images/charles.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
@@ -23,22 +23,25 @@ export const Wrapper = styled.div`
    margin: 0;
    padding: 5rem 9rem;
    margin-bottom: 0;
+   @media (max-width: ${mq.tablet.narrow.maxWidth}) and (min-width: ${mq.tablet.narrow.minWidth}) {
+     padding: 5rem 0;
+   }
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       display: block;
-      padding: 2rem;
+      padding: 1rem;
    }
 `;
 
 
-export const ContactOverlay = styled.div`
-   /* position: absolute;
-   top: 50%;
-   height: 100%;
-   width: 100%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   background-color: linear-gradient(${theme.colors.primary}, ${theme.colors.lightGold}); */
-`;
+// export const ContactOverlay = styled.div`
+//    /* position: absolute;
+//    top: 50%;
+//    height: 100%;
+//    width: 100%;
+//    left: 50%;
+//    transform: translate(-50%, -50%);
+//    background-color: linear-gradient(${theme.colors.primary}, ${theme.colors.lightGold}); */
+// `;
 
 export const ContactInfo = styled.div`
    flex-basis: 50%;
@@ -66,7 +69,6 @@ export const ContactInfo = styled.div`
 
 const ContactSection = props => (
   <Wrapper>
-      <ContactOverlay />
       <ContactInfo>
          <h4>Reach us quickly!</h4>
          <ul>

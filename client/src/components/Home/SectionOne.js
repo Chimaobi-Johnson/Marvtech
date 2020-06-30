@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import Fade from 'react-reveal/Fade';
-import { theme, mq } from "../../constants/theme";
+import { mq } from "../../constants/theme";
 import "./SectionOne.css";
 
 
@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
    background-color: #fff;
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       display: block;
-      margin: 4rem 0;
+      margin: 0;
    }
 
 `;
@@ -29,11 +29,24 @@ export const SectionOneText = styled.div`
    font-size: 1.1rem;
    line-height: 1.7;
    color: #000;
+   @media (max-width: ${mq.tablet.narrow.maxWidth}) and (min-width: ${mq.tablet.narrow.minWidth}) {
+      flex-basis: 80%;
+      padding-right: 0;
+   }
    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
       line-height: 1.5;
       border-right: none;
       padding-left: 1rem;
       padding-right: 5rem;
+   }
+   @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+      color: #eaeaea;
+      padding-right: 1rem;
+      padding-left: 0;
+      font-size: 1.1rem;
+      h2 {
+        margin-top: 2rem;
+      }
    }
 
    h2 {
@@ -49,13 +62,19 @@ export const SectionOneText = styled.div`
 export const SectionOnePicture = styled.div`
    flex-basis: 30%;
    z-index: 1;
+   @media (max-width: ${mq.tablet.narrow.maxWidth}) and (min-width: ${mq.tablet.narrow.minWidth}) {
+      display: none;
+   }
+   @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+     display: none;
+     ul {
+       margin-top: 0;
+     }
+   }
    ul {
      margin-left: 3rem;
      list-style-type: square;
      margin-top: 2rem;
-     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-        margin-left: 0;
-     }
      li {
        font-size: 1.1rem;
        padding: 1rem 0;
@@ -87,7 +106,7 @@ const SectionOne = props => (
         software solutions that will allow these industries manage their data, decisions, and operations
         without having to spend a fortune.</p>
         <p>By targeting organizations who cannot afford sophisticated software, we aim to introduce affordable
-        software solutions to these organization through our platforms</p>
+        software solutions to these organizations through our platforms</p>
       </Fade>
       </SectionOneText>
       <SectionOnePicture>

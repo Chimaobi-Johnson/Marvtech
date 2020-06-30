@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "shards-react";
+import { mq } from "../../constants/theme";
 import portfolios from "../../images/portfolios.jpg";
 import Fade from 'react-reveal/Fade';
 
@@ -12,6 +13,12 @@ export const Wrapper = styled.div`
      position: relative;
      background-color: #1f2641;
      div {
+       @media (max-width: ${mq.tablet.narrow.maxWidth}) and (min-width: ${mq.tablet.narrow.minWidth}) {
+         width: 72%;
+       }
+       @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+         width: 94%;
+       }
        position: absolute;
        top: 50%;
        left: 50%;

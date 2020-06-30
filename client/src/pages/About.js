@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import AboutLayout from "../layouts/PageLayout/AboutLayout";
 import ReactFade from 'react-reveal/Fade';
+import { mq } from "../constants/theme";
 
 
 export const AboutText = styled.div`
@@ -15,6 +16,13 @@ export const AboutText = styled.div`
 `;
 
 export const AboutParagraph = styled.p`
+    @media (max-width: ${mq.tablet.narrow.maxWidth}) and (min-width: ${mq.tablet.narrow.minWidth}) {
+       padding: 5rem;
+    }
+    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+       padding: 2rem;
+    }
+
      line-height: 2;
      text-align: justify;
      padding: 0 15rem;

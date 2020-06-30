@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Fade from 'react-reveal/Fade';
-
+import { mq } from "../../constants/theme";
 
 export const Wrapper = styled.div`
   min-height: 100vh;
@@ -14,10 +14,16 @@ export const Heading = styled.h1`
   padding-top: 9rem;
   font-size: 2rem;
   padding-bottom: 3rem;
+  @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+    font-size: 1.5rem;
+  }
 `;
 
 
 export const IndustryContainer = styled.div`
+  @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+    display: block;
+  }
   width: 90%;
   margin: 0 auto;
   display: flex;
