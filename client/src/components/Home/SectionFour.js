@@ -13,7 +13,6 @@ export const Heading = styled.h1`
   text-align: center;
   padding-top: 9rem;
   font-size: 2rem;
-  padding-bottom: 3rem;
   @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
     font-size: 1.5rem;
   }
@@ -27,6 +26,7 @@ export const IndustryContainer = styled.div`
   width: 90%;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
 `;
@@ -36,6 +36,7 @@ export const IndustryBox = styled.div`
   &:hover {
     box-shadow: 1px 2px 50px #b9b9b9;
   }
+  margin-top: 3rem;
   transition: .3s;
   box-shadow: 1px 2px 50px #dddbdba8;
   background-color: #fff;
@@ -70,6 +71,14 @@ const SectionFour = props => (
        <IndustryBox>
          <img src={require("../../images/manufacturing.jpg")} alt="manufacturing" />
          <h6>Manufacturing</h6>
+       </IndustryBox>
+       <IndustryBox>
+         <img src={require("../../images/shopping.jpg")} alt="manufacturing" />
+         <h6>Consumer and Retail</h6>
+       </IndustryBox>
+       <IndustryBox>
+         <img src={require("../../images/cafe-interior.jpg")} alt="manufacturing" />
+         <h6>Hospitality and Leisure</h6>
        </IndustryBox>
     </IndustryContainer>
 

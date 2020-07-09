@@ -45,16 +45,10 @@ const SectionAbout = props => (
           <div>
              <h2 id="aboutHeading">WHY WE ARE HERE</h2>
               <p>
-                  We believe everyday life should be easy not complex. Complexity is a time killer!
-                   There is so much hardship in Nigeria/Africa stemming from challenges we are fully aware of
-                    and as a result of this many businesses have failed to
-                   scale and continue to operate primitive systems that are alien to this
-                   fast paced world. This challenge is more pronounced with SMEs in education, health, and
-                   business - little wonder why the continent is on a slow crawl to development.
-                   Having observed the tech scene for a while, we can say that software solutions are relatively
-                   expensive and only a hand full of the populace can comfortably afford them.
-                  We saw a need for a divergent kind of technology, and it was crystal clear it would take a
-                  divergent company to build it.
+                  We believe everyday life should be easy not complex- complexity is a time killer!
+                  There is so much hardship existent in Nigeria/Africa today stemming from challenges impeding growth and development,
+                  and as a result of this businesses have crashed and many have failed to scale as they continue to operate primitive systems that are alien
+                  to this fast paced world. This challenge is pronounced with SMEs, little wonder why the continent is on a slow crawl to development.
               </p>
           </div>
           </Fade>

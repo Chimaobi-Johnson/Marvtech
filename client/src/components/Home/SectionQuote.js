@@ -44,7 +44,7 @@ const SectionQuote = props => {
 
 
   return (
-  <Wrapper>
+  <Wrapper id="sectionQuote">
   <QuoteModal
     handleOpen={handleOpen}
     handleClose={handleClose}

@@ -10,6 +10,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import ReactFade from 'react-reveal/Fade';
 
+
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: 'flex',
@@ -21,13 +22,21 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-    width: '45%',
+    width: '70%',
     padding: '2rem'
   },
 }));
 
 const StyledBackdrop = styled(Backdrop)`
    background-color: #0000008f;
+`;
+
+const CustomModal = styled(Modal)`
+   @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+     .makeStyles-paper-3 {
+       width: 80%;
+     }
+   }
 `;
 
 
@@ -113,11 +122,11 @@ const Footer = props => {
     };
 
     const visionModalOpen = () => {
-      setMissionModal(true);
+      setVisionModal(true);
     };
 
     const visionModalClose = () => {
-      setMissionModal(false);
+      setVisionModal(false);
     };
 
     const MissionModal = () => (
@@ -144,7 +153,7 @@ const Footer = props => {
     )
 
     const VisionModal = () => (
-      <Modal
+      <CustomModal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className={classes.modal}
@@ -162,7 +171,7 @@ const Footer = props => {
           <p id="transition-modal-description">“To be a leading provider of quality technological solutions in Nigeria and beyond”</p>
         </div>
        </Fade>
-      </Modal>
+      </CustomModal>
     )
 
 

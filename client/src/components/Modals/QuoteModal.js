@@ -4,6 +4,7 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import styled from "styled-components";
+import { mq } from "../../constants/theme";
 import { Form, FormInput, FormTextarea, FormGroup, FormSelect, Button } from "shards-react";
 import bgImage from "../../images/businessmeeting2.jpg";
 
@@ -12,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    margin: '2rem'
   },
 }));
 
@@ -23,6 +25,9 @@ export const Wrapper = styled.div`
 `;
 
 export const FormContainer = styled.div`
+@media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+   padding: 3rem 1rem;
+}
    border-radius: 8px;
    flex-basis: 40%;
    margin: 0 auto;

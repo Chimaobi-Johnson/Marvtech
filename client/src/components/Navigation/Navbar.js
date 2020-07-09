@@ -2,11 +2,29 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { theme } from "../../constants/theme";
 import { NavLink } from "react-router-dom";
+// import {
+//   Navbar,
+//   NavbarToggler,
+//   Nav,
+//   NavItem,
+//   Collapse
+// } from "shards-react";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Navbar,
   NavbarToggler,
+  NavbarBrand,
   Nav,
   NavItem,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText,
+  FormInput,
   Collapse
 } from "shards-react";
 
@@ -25,10 +43,8 @@ const StyledNavbar = styled(Navbar)`
    border-bottom: none;
    /* background-color: #4190e8;   */
    .navbar-toggler {
-       border: 1px solid #9e9e9eb8;
+       border: none;
        background-color: transparent;
-       border-radius: none;
-       padding: .3rem .3rem;
    }
 `;
 
@@ -41,7 +57,7 @@ const StyledNavLink = styled.a`
     text-decoration: none;
     color: #fff;
     &:hover {
-      color: #292929;
+      color: rgb(0, 183, 255);
       text-decoration: none;
     }
 `;
@@ -58,7 +74,7 @@ const StyledNavBrand = styled(NavLink)`
       display: inline-block;
       text-decoration: none;
       &:hover {
-        color: #292929;
+        color: rgb(0, 183, 255);
         text-decoration: none;
       }
 `;
@@ -99,7 +115,7 @@ const NavigationBar = props => {
   }
 
   return (
-  <StyledNavbar id="navheader" expand="md">
+  <StyledNavbar id="navheader" expand="md" type="dark">
        <StyledNavBrand to="/">MARVTECH</StyledNavBrand>
        <NavbarToggler onClick={toggleNavbar} />
 
@@ -121,7 +137,7 @@ const NavigationBar = props => {
              </StyledNavLink>
            </StyledNavItem>
            <StyledNavItem>
-             <StyledNavLink href="/get-a-quote">
+             <StyledNavLink href="#sectionQuote">
                Get a Quote
              </StyledNavLink>
            </StyledNavItem>

@@ -37,6 +37,9 @@ const BackgroundOverlay = styled.div`
 
 
 const CoverText = styled.div`
+@media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+   width: 80%;
+}
     width: 60%;
     height: 20%;
     top: 50%;
@@ -61,6 +64,7 @@ const ContentContainer = styled.div`
 
 const ContentSideBar = styled.div`
      @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+       display: none;
        width: 70%;
        top: 56%;
      }
@@ -83,7 +87,7 @@ const ContentMain = styled.div`
 
 `;
 
-const StyledNavLink = styled(NavLink)`
+const StyledNavLink = styled.a`
     flex: 1;
     padding: 2rem 0;
 `;
@@ -102,11 +106,11 @@ const ServicesLayout = props => {
         <ContentContainer>
            <ContentSideBar>
               <ul>
-                 <li><StyledNavLink to="/web-design">Web Design</StyledNavLink></li>
-                 <li><StyledNavLink to="/web-development">Web Application Development</StyledNavLink></li>
-                 <li><StyledNavLink to="/mobile-design">Mobile Application Development</StyledNavLink></li>
-                 <li><StyledNavLink to="/get-a-quote">Get a Quote</StyledNavLink></li>
-                 <li><StyledNavLink to="/about">About</StyledNavLink></li>
+                 <li><StyledNavLink href="#webDesign">Web Design</StyledNavLink></li>
+                 <li><StyledNavLink href="#webDevelopment">Web Application Development</StyledNavLink></li>
+                 <li><StyledNavLink href="#mobileDesign">Mobile Application Development</StyledNavLink></li>
+                 <li><StyledNavLink href="#sectionQuote">Get a Quote</StyledNavLink></li>
+                 <li><StyledNavLink href="#testimonials">Testimonials</StyledNavLink></li>
               </ul>
            </ContentSideBar>
            <ContentMain>

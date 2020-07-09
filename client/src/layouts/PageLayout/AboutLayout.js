@@ -17,6 +17,9 @@ const CoverImageContainer = styled.div`
     background-size: cover;
     background-attachment: fixed;
     background-image: linear-gradient(#202020bf,#01b8ff3d), url(${kekeBg});
+    @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
+       background-position: right;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -51,7 +54,9 @@ const ContentSideBar = styled.div`
     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
        width: 70%;
        top: 56%;
+       display: none;
     }
+     z-index: 20;
      width: 25%;
      position: absolute;
      top: 53%;
@@ -71,7 +76,7 @@ const ContentMain = styled.div`
 
 `;
 
-const StyledNavLink = styled(NavLink)`
+const StyledNavLink = styled.a`
     flex: 1;
     padding: 2rem 0;
 `;
@@ -90,10 +95,10 @@ const AboutLayout = props => {
         <ContentContainer>
            <ContentSideBar>
               <ul>
-                 <li><StyledNavLink to="/about">About</StyledNavLink></li>
-                 <li><StyledNavLink to="/get-a-quote">Get a Quote</StyledNavLink></li>
-                 <li><StyledNavLink to="/services">Services</StyledNavLink></li>
-                 <li><StyledNavLink to="/contact">Contact Us</StyledNavLink></li>
+                 <li><StyledNavLink href="#about">Why we are here</StyledNavLink></li>
+                 <li><StyledNavLink href="#mission">Mission</StyledNavLink></li>
+                 <li><StyledNavLink href="#vision">Vision</StyledNavLink></li>
+                 <li><StyledNavLink href="#pillars">Pillars</StyledNavLink></li>
               </ul>
            </ContentSideBar>
            <ContentMain>
