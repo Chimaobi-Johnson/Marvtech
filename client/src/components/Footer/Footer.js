@@ -145,8 +145,9 @@ const Footer = props => {
        <Fade in={missionModal}>
         <div className={classes.paper}>
           <h2 id="transition-modal-title">Our Mission</h2>
-          <p id="transition-modal-description">“To improve technological integration and innovation in
-          Nigeria and Africa by providing easier access to technology and relevant software solutions”</p>
+          <p id="transition-modal-description">
+          “To help drive technological growth and innovation in Nigeria and Africa's
+          business environment by providing easier access to technology and relevant software solutions.”</p>
         </div>
        </Fade>
       </Modal>

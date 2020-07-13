@@ -258,7 +258,7 @@ const Services = props => {
   return (
     <ServicesLayout
        covername="Services"
-       coverdescr="ksind subis flnf va ksds dhbu ksn skdburbf eibviek fva vliab"
+       coverdescr="We offer software development services on web and mobile platforms"
     >
     <ServiceWrapper>
       <WebDesignBlock>
@@ -267,9 +267,9 @@ const Services = props => {
            <Fade>
             <div>
              <h2>Web Design</h2>
-              <p>is at the core of a great digital presence. If your branding is missing clarity an d
-              meaning or needs a little beauty lift, our team is here to help. Creating the entire brand
-              identity of a business is an exciting task, and we can build out all aspects cove ring the logo/mark</p>
+              <p>We pride ourselves in creating quality and
+                 affordable website designs from custom UI designs to content management systems
+                 we offer whatever solutions that best suits your needs.</p>
             </div>
             <img src={require("../images/onechildonelens.jpg")} alt="website image" />
            </Fade>
@@ -280,9 +280,7 @@ const Services = props => {
       <DevBlockLeft id="webDevelopment">
        <Fade>
         <h2>Web Development</h2>
-        <p>is at the core of a great digital presence. If your branding is missing clarity an d
-        meaning or needs a little beauty lift, our team is here to help. Creating the entire brand
-        identity of a business is an exciting task, and we can build out all aspects cove ring the logo/mark</p>
+        <p>Our team specialises in developing web applications customized to suit your business preference.</p>
        </Fade>
       </DevBlockLeft>
       <DevBlockRight>
@@ -302,9 +300,8 @@ const Services = props => {
       <MDBlockRight id="mobileDesign">
        <Fade>
         <h2>Mobile Application Development</h2>
-        <p>is at the core of a great digital presence. If your branding is missing clarity an d
-        meaning or needs a little beauty lift, our team is here to help. Creating the entire brand
-        identity of a business is an exciting task, and we can build out all aspects cove ring the logo/mark</p>
+        <p>With the swift rise in mobile technology, we are here to ensure you always stay relevant
+           and connect with your target segment on the go.</p>
        </Fade>
       </MDBlockRight>
       </MobileDevBlock>

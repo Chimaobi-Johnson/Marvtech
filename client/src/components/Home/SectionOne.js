@@ -91,13 +91,13 @@ export const SectionOnePicture = styled.div`
 
 
 const SectionOne = props => (
-  <Wrapper>
+  <Wrapper id="sectionOne">
       <Fade right>
       <div className="custom-polygon">
 
       </div>
       </Fade>
-      <SectionOneText>
+      <SectionOneText id="sectionOneText">
       <Fade>
         <h2>Easier Access to Software </h2>
         <p>Most sectors in Nigeria and Africa as a whole have

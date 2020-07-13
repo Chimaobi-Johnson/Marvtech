@@ -21,6 +21,7 @@ export const Wrapper = styled.div`
        @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
          width: 94%;
        }
+       color: #000;
        position: absolute;
        top: 50%;
        left: 50%;
@@ -41,6 +42,7 @@ export const Wrapper = styled.div`
        @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
          width: 94%;
        }
+       color: #000;
        position: absolute;
        top: 50%;
        left: 50%;
@@ -111,20 +113,20 @@ const SectionThree = props => {
         <div className="webdesign__block" id="webDev">
         <Fade>
           <h2>Web Design and Development</h2>
-          <p>is at the core of a great digital presence. If your branding is missing clarity an
-          d meaning or needs a little beauty lift, our team is here to help. Creating the entire
-          brand identity of a business is an exciting task, and we can build out all aspects cove
-          ring the logo/mark</p>
+          <p>Looking for a great website? <br />
+            We create affordable website designs using content management systems,
+            our team also develops web based applications customized to suit your preference.
+            In our world Affordability and Quality shouldn’t be compromised,
+            tell us about your amazing idea let’s get started!</p>
         </Fade>
         <MoreButton> Learn More </MoreButton>
         </div>
         <div className="mobiledesign__block" style={{ display: "none" }} id="mobileDev">
         <Fade>
           <h2>Mobile Application Development</h2>
-          <p>xmc xk djkf dkfjn vjkv s.v jdkf vsdf
-          dfkvdfk kd fvkjd vjd fjkvdfvn
-           we can build out all aspects cove
-          ring the logo/mark</p>
+          <p>With the swift rise in mobile technology,
+          we are here to ensure you always stay relevant and connect with your target segment on the go.
+          </p>
         </Fade>
         <MoreButton> Learn More </MoreButton>
         </div>

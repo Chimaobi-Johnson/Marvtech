@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Button } from "shards-react";
 import { mq } from "../../constants/theme";
 import mobileBg from "../../images/droneview.png";
+import { withRouter } from "react-router-dom";
 
 export const Wrapper = styled.div`
    width: 100%;
@@ -189,6 +190,9 @@ const Landing = props => {
   // // x.addListener(myFunction)
   // })
 
+ // const gotoPage = () => {
+ //   props.history.push("#sectionOne");
+ // }
 
   const renderLandingSection = () => {
     if(isMobile) {
@@ -220,7 +224,7 @@ const Landing = props => {
                <div>Through our software platforms and custom application development
                we aim to drive change within Small and Medium Enterprises
                </div>
-               <StyledButton outline>Learn More</StyledButton>
+               <StyledButton outline><a style={{ textDecoration: 'none', color: 'inherit' }} href="#sectionOne">Learn More</a></StyledButton>
             </LandingTextBox>
         </Wrapper>
       )
@@ -235,4 +239,4 @@ const Landing = props => {
 }
 
 
-export default Landing;
+export default withRouter(Landing);

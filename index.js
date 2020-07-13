@@ -1,5 +1,14 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+
 const app = express();
+
+const appRoutes = require("./routes/appRoutes");
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.use(appRoutes);
 
 if(process.env.NODE_ENV === "production") {
   // express will serve up production assets like main.js

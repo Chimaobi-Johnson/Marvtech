@@ -16,10 +16,17 @@ export const AboutText = styled.div`
     top: 26%;
     position: absolute;
     width: 76%;
+    z-index: 5;
     .heading {
       color: #292929;
       display: none;
       padding: 0 15rem;
+    }
+    @media (max-width: ${mq.tablet.narrow.maxWidth}) and (min-width: ${mq.tablet.narrow.minWidth}) {
+      margin-top: 0;
+      padding-left: .5rem;
+      width: 100%;
+      position: relative;
     }
     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
        margin-top: 0;
@@ -77,6 +84,15 @@ export const AboutImage = styled.div`
    flex: 1;
    background-image: linear-gradient(to right, #0b3546d4, #00000080), url(${bgImage});
    /* background-position: top; */
+   h3 {
+     position: absolute;
+     top: 32%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-transform: uppercase;
+     color: #eaeaea;
+     width: 60%;
+   }
 `;
 
 
@@ -113,23 +129,26 @@ export const TopLeft = styled.div`
 `;
 
 export const PillarsWrapper = styled.div`
-      display: flex;
-      height: 80vh;
-      margin-top: 26%;
-      padding-bottom: 15rem;
-      @media (max-width: ${mq.tablet.narrow.maxWidth}) and (min-width: ${mq.tablet.narrow.minWidth}) {
-         margin-top: 25rem;
-      }
-      @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
-         display: block;
-         height: 50vh;
-         margin-top: 0;
-         padding-bottom: 0;
+      height: 130vh;
+      margin-top: 40%;
+      /* padding-bottom: 15rem; */
+      @media (max-width: ${mq.tablet.narrow.maxWidth}) {
+        display: block;
+        height: 100vh;
+        margin-top: 0;
+        padding-bottom: 0;
       }
 `;
 
 
 export const Pillars = styled.div`
+    @media (max-width: ${mq.tablet.narrow.maxWidth}) {
+      width: 100%;
+    }
+   width: 70%;
+   background-color: #12344163;
+   padding: 1rem 0;
+   border-radius: 3rem;
     h4 {
       color: #fff;
       text-align: center;
@@ -137,17 +156,30 @@ export const Pillars = styled.div`
     }
     color: #eaeaea;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     ul {
       list-style: none;
-      display: flex;
       li {
         padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        margin: 2rem auto;
+        span {
+          padding: 1rem 2rem;
+        }
+        span:not(:last-child) {
+          border-right: 1px solid #eaeaea;
+          flex-basis: 35%;
+          font-weight: bold;
+        }
+        span:last-child {
+          flex: 1;
+        }
       }
       li:not(:last-child) {
-        border-right: 1px solid #eaeaea;
+        /* border-right: 1px solid #eaeaea; */
       }
     }
 `;
@@ -165,6 +197,7 @@ const About = props => {
     <TopContainer>
      <TopLeft></TopLeft>
      <AboutImage>
+        <h3>Marvis Technologies</h3>
      </AboutImage>
 
     </TopContainer>
@@ -172,17 +205,22 @@ const About = props => {
       <h3 className="heading">AT MARVIS TECHNOLOGIES</h3>
       <AboutParagraph id="about">
       <ReactFade>
-      We believe everyday life should be easy not complex- complexity is a time killer!
+      We believe everyday life should be easy not complex- complexity is a time killer! <br />
       There is so much hardship existent in Nigeria/Africa today stemming from challenges impeding growth and development,
-      and as a result of this businesses have crashed and many have failed to scale as they continue to operate primitive systems that are
-      alien to this fast paced world. This challenge is pronounced with SMEs, little wonder why the continent is on a slow crawl to development.
+      and as a result of this businesses have crashed and many have failed to scale as they continue to operate primitive
+      systems that are
+      alien to this fast paced world. This challenge is pronounced with SMEs, little wonder why the continent
+      is on a slow crawl to development. <br />
+      Having observed the tech scene for a while, we can say that software solutions are
+      relatively expensive and only a handfull of the populace can comfortably afford them. <br />
+      We saw a need for a divergent kind of technology, and it was crystal clear it would take a divergent company to build it.
       </ReactFade>
      </AboutParagraph>
      <MissionStatement id="mission">
       <ReactFade>
        <h3>Our Mission</h3>
-       <p>“To improve technological integration and innovation in
-        Nigeria and Africa by providing easier access to technology and relevant software solutions”</p>
+       <p>"To help drive technological growth and innovation in Nigeria and Africa's
+       business environment by providing easier access to technology and relevant software solutions.”</p>
       </ReactFade>
      </MissionStatement>
      <VisionStatement id="vision">
@@ -198,15 +236,16 @@ const About = props => {
            <ReactFade>
            <h4>Our Pillars</h4>
            <ul>
-              <li>Software</li>
-              <li>Innovation</li>
-              <li>Service</li>
+              <li><span>Software</span><span>Our custom made software solutions address the needs of our clients</span></li>
+              <li><span>Innovation</span><span>We not only turn ideas to reality, we also employ best practices to
+               help our clients stay relevant in their space.</span></li>
+              <li><span>Service</span><span>We care about our clients, and your maximum satisfaction is our priority. We win when our clients win.</span></li>
            </ul>
            </ReactFade>
         </Pillars>
      </PillarsContainer>
-     <div style={{ flexBasis: "50%", height: "100%" }}></div>
     </PillarsWrapper>
+
     </AboutContainer>
 
     </AboutLayout>
