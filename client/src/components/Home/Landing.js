@@ -14,8 +14,9 @@ export const Wrapper = styled.div`
 
 export const MobileWrapper = styled.div`
    width: 100%;
-   height: 100vh;
-   background-image: linear-gradient(to top, #1ea2e3c4, #0909094f), url(${mobileBg});
+   height: 69vh;
+   /* background-image: linear-gradient(to top, #1ea2e3c4, #0909094f), url(${mobileBg}); */
+   background-image: linear-gradient(to top, rgb(30 162 227 / 0%), rgba(9, 9, 9, 0.31)), url(${mobileBg});
    background-size: cover;
    background-position: right;
 `;
@@ -44,15 +45,16 @@ export const MobileLandingTextBox = styled.div`
    width: 80%;
    position: absolute;
    z-index: 500;
-   top: 40%;
-   right: 0;
-   font-size: 1.1rem;
+   top: 41%;
+   right: 10px;
+   font-size: 1rem;
    transition: all .3s;
    padding: 2rem 0 2rem 2rem;
+   background-color: #06070887;
    /* transform: translate(-50%, -50%); */
    h2 {
-    color: #292929;
-    font-size: 1.8rem;
+    color: #00b8d8;
+    font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: .5rem;
     font-weight: bold;

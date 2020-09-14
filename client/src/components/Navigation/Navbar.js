@@ -11,6 +11,7 @@ import { NavLink } from "react-router-dom";
 // } from "shards-react";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import MarvtechLogo from "../../images/marvtech_logo.png";
 import {
   Navbar,
   NavbarToggler,
@@ -85,6 +86,16 @@ const StyledNavItem = styled(NavItem)`
       font-family: 'Share Tech', sans-serif;
 `;
 
+// const LogoContainer = styled.div`
+//       width: 100%;
+//       height: 100%;
+//       margin-left: -22px;
+//       z-index: -1;
+//       img {
+//         width: 3%;
+//       }
+// `;
+
 
 const NavigationBar = props => {
 
@@ -117,6 +128,7 @@ const NavigationBar = props => {
   return (
   <StyledNavbar id="navheader" expand="md" type="dark">
        <StyledNavBrand to="/">MARVTECH</StyledNavBrand>
+       {/* <LogoContainer><img src={MarvtechLogo} alt="" /></LogoContainer> */}
        <NavbarToggler onClick={toggleNavbar} />
 
        <StyledCollapse open={collapseOpen} navbar>

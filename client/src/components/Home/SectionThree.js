@@ -108,8 +108,8 @@ const SectionThree = props => {
 
     return (
       <Wrapper>
-        <NavigationButton style={{ left: '1%' }} onClick={slideToNextItem}><FontAwesomeIcon icon={faArrowLeft} size="sm" /></NavigationButton>
-        <NavigationButton style={{ right: '1%' }} onClick={slideToNextItem}><FontAwesomeIcon icon={faArrowRight} size="sm" /></NavigationButton>
+        <NavigationButton style={{ left: '1%', zIndex: '100' }} onClick={slideToNextItem}><FontAwesomeIcon icon={faArrowLeft} size="sm" /></NavigationButton>
+        <NavigationButton style={{ right: '1%', zIndex: '100' }} onClick={slideToNextItem}><FontAwesomeIcon icon={faArrowRight} size="sm" /></NavigationButton>
         <div className="webdesign__block" id="webDev">
         <Fade>
           <h2>Web Design and Development</h2>
