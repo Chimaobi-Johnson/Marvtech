@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { mq } from "../../constants/theme";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faGoogle, faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -222,6 +223,7 @@ const Footer = props => {
         <FooterRight>
           <ReactFade>
             <p>+2347012191531</p>
+            <p>+447759991282</p>
             <ul>
                <li><StyledNavLink href="#"><FontAwesomeIcon icon={faFacebookF} size="sm" /></StyledNavLink></li>
                <li><StyledNavLink href="#"><FontAwesomeIcon icon={faTwitter} size="sm" /></StyledNavLink></li>
@@ -229,6 +231,7 @@ const Footer = props => {
                <li><StyledNavLink href="#"><FontAwesomeIcon icon={faWhatsapp} size="sm" /></StyledNavLink></li>
             </ul>
             <p>&copy; Marvis Technologies</p>
+            <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Selly Oak, Birmingham. United Kingdom</p>
           </ReactFade>
         </FooterRight>
      </Wrapper>

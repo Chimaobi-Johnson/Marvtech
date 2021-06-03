@@ -312,28 +312,25 @@ const Services = props => {
         <TestimonialBoxContainer>
           <TestimonialBox>
              <Quote>&#8221;</Quote>
-             <p className="testimonial_text">Working with Marvtech is just great,
-             my problems have been solved overnight</p>
+             <p className="testimonial_text">Very attentive and patient with their client.</p>
              <HeadingLine />
-             <img src={require("../images/girl-ph.jpg")} alt="" />
-             <p className="testimonial_owner">Mrs Philip Etong</p>
-             <p className="testimonial_position">CEO BedRock Foundation</p>
+             <img src={require("../images/boy-ph.jpg")} alt="" />
+             <p className="testimonial_owner">Emeka Igbokwe</p>
+             <p className="testimonial_position">Trust Ventures</p>
           </TestimonialBox>
 
           <TestimonialBox className="testimonial_centerbox">
              <Quote>&#8221;</Quote>
-             <p className="testimonial_text">Working with Marvtech is just great,
-             my problems have been solved overnight</p>
+             <p className="testimonial_text">I had my doubts at first with them but now I can say I dont regret working with Marvtech. They guide you all through and deliver on time too.</p>
              <HeadingLine />
              <img src={require("../images/girl-ph.jpg")} alt="" />
-             <p className="testimonial_owner">Mrs Philip Etong</p>
-             <p className="testimonial_position">CEO BedRock Foundation</p>
+             <p className="testimonial_owner">Preeti Kaur</p>
+             <p className="testimonial_position">Misha Catering</p>
           </TestimonialBox>
 
           <TestimonialBox>
              <Quote>&#8221;</Quote>
-             <p className="testimonial_text">Working with Marvtech is just great,
-             my problems have been solved overnight</p>
+             <p className="testimonial_text">Working with Marvtech is just great. They actually exceeded my expectations</p>
              <HeadingLine />
              <img src={require("../images/girl-ph.jpg")} alt="" />
              <p className="testimonial_owner">Mrs Philip Etong</p>
