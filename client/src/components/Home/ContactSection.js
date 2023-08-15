@@ -73,7 +73,7 @@ const ContactSection = props => (
          <h4>Reach us quickly!</h4>
          <ul>
             <li>Lagos: <FontAwesomeIcon icon={faPhone} size="sm" /> +2348168440027</li>
-            <li>Enugu: <FontAwesomeIcon icon={faPhone} size="sm" /> +2347012191531</li>
+            <li>Enugu: <FontAwesomeIcon icon={faPhone} size="sm" /> +447759991282</li>
             <li><FontAwesomeIcon icon={faGoogle} size="sm" /> marvistechnologies@gmail.com</li>
          </ul>
       </ContactInfo>

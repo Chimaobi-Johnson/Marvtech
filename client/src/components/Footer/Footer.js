@@ -222,7 +222,7 @@ const Footer = props => {
         </FooterLeft>
         <FooterRight>
           <ReactFade>
-            <p>+2347012191531</p>
+            <p>+2348168440027</p>
             <p>+447759991282</p>
             <ul>
                <li><StyledNavLink href="#"><FontAwesomeIcon icon={faFacebookF} size="sm" /></StyledNavLink></li>
@@ -231,7 +231,7 @@ const Footer = props => {
                <li><StyledNavLink href="#"><FontAwesomeIcon icon={faWhatsapp} size="sm" /></StyledNavLink></li>
             </ul>
             <p>&copy; Marvis Technologies</p>
-            <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Selly Oak, Birmingham. United Kingdom</p>
+            <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Enugu, Nigeria</p>
           </ReactFade>
         </FooterRight>
      </Wrapper>
