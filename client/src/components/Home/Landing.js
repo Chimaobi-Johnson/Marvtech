@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
    /* background-color: blue; */
    @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
     overflow: hidden;
-    height: auto;
+    height: 60h;
   }
 
 `;
@@ -99,8 +99,9 @@ export const LandingTextBox = styled.div`
    }
    @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
       padding: 2rem 0;
-      top: 80%;
-      left: 5%;
+      padding-left: 0;
+      top: 58%;
+      left: 0%;
    }
    width: 50%;
    position: absolute;
@@ -131,13 +132,16 @@ export const LandingTextBox = styled.div`
     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
        font-size: 1.2rem;
     }
+    @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+      padding-left:5%;
+    }
    }
    div {
      @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
        color: #eaeaea;
        padding: 1rem;
        background-color: #00000065;
-       width: 100%;
+       width: 160%;
      }
      font-weight: 500;
      color: #ffffffb0;

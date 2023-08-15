@@ -21,6 +21,7 @@ export const Wrapper = styled.div`
    }
    @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
       height: auto;
+      margin-top: 2rem;
    }
 
 `;
@@ -65,6 +66,8 @@ export const SectionOneText = styled.div`
 export const SectionOnePicture = styled.div`
    flex-basis: 30%;
    z-index: 1;
+   @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+   }
    @media (max-width: ${mq.tablet.narrow.maxWidth}) and (min-width: ${mq.tablet.narrow.minWidth}) {
       display: none;
    }

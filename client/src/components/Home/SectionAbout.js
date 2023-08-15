@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
       padding: 2rem 1rem;
     }
     @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+      margin-top: 23rem;
       padding: 1rem !important;
       p {
         font-size: 1.1rem !important;
