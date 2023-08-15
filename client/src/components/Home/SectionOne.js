@@ -19,6 +19,9 @@ export const Wrapper = styled.div`
       display: block;
       margin: 0;
    }
+   @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+      height: auto;
+   }
 
 `;
 
@@ -43,7 +46,7 @@ export const SectionOneText = styled.div`
       color: #eaeaea;
       padding-right: 1rem;
       padding-left: 0;
-      font-size: 1.1rem;
+      font-size: 1rem;
       h2 {
         margin-top: 2rem;
       }

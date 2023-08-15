@@ -10,6 +10,11 @@ export const Wrapper = styled.div`
    /* height: 100vh; */
    position: relative;
    /* background-color: blue; */
+   @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+    overflow: hidden;
+    height: auto;
+  }
+
 `;
 
 export const MobileWrapper = styled.div`
@@ -23,7 +28,17 @@ export const MobileWrapper = styled.div`
 
 export const Video = styled.video`
    width: 100%;
+   @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+    width: 180%;
+    margin-left -40%;
+    z-index: 200;
+   }
 `;
+
+const MobileVideo = styled.video`
+  width: 100%;
+  height: 100vh;  
+`
 
 export const VideoOverlay = styled.div`
    width: 100%;
@@ -33,12 +48,16 @@ export const VideoOverlay = styled.div`
    top: 49%;
    left: 50%;
    transform: translate(-50%, -50%);
-   /* background-image: linear-gradient(#202020bf,#eff0f069); */
+   /* background-image: linear-gradient(#202020bf, #eff0f069); */
    /* background-color: #1f2641f0; */
    /* background-color: #04a1ffe3; */
    /* #778899 #1fa6dbab */
      background-color: #0009; /*#04a5f4 */
    /* background-image: linear-gradient(180deg, #0087ff00 0%, #007cff80 25%, #0087ffc2 70%, #007aff 100%); */
+   @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
+    background-image: linear-gradient(180deg,#53535300 0%,#4d4d4d00 25%,#000000bf 70%,#0000009e 100%);
+   }
+
 `;
 
 export const MobileLandingTextBox = styled.div`
@@ -80,9 +99,8 @@ export const LandingTextBox = styled.div`
    }
    @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
       padding: 2rem 0;
-      top: 47%;
-      width: 100%;
-      left: 0;
+      top: 80%;
+      left: 5%;
    }
    width: 50%;
    position: absolute;
@@ -108,7 +126,7 @@ export const LandingTextBox = styled.div`
     font-weight: bold;
     line-height: 1;
     @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
-       padding-left: 1.6rem;
+       padding-left: 0rem;
     }
     @media screen and (max-width: ${mq.tablet.narrow.minWidth}) {
        font-size: 1.2rem;
@@ -116,9 +134,10 @@ export const LandingTextBox = styled.div`
    }
    div {
      @media screen and (max-width: ${mq.phone.narrow.maxWidth}) {
-       color: #000;
+       color: #eaeaea;
        padding: 1rem;
-       background-color: #ffffffeb;
+       background-color: #00000065;
+       width: 100%;
      }
      font-weight: 500;
      color: #ffffffb0;
@@ -180,12 +199,12 @@ export const StyledButton = styled(Button)`
 
 const Landing = props => {
 
-  const [ isMobile, setMediaQuery ] = useState(true);
+  // const [ isMobile, setMediaQuery ] = useState(true);
 
-  useEffect(() => {
-    const x = window.matchMedia("(max-width: 450px)");
-    setMediaQuery(x.matches);
-  })
+  // useEffect(() => {
+  //   const x = window.matchMedia("(max-width: 450px)");
+  //   setMediaQuery(x.matches);
+  // })
 
 
   // myFunction(x) // Call listener function at run time
@@ -197,19 +216,7 @@ const Landing = props => {
  // }
 
   const renderLandingSection = () => {
-    if(isMobile) {
-      return (
-        <MobileWrapper>
-           <MobileLandingTextBox>
-             <h2>Software and Innova<span style={{ color: "rgb(229, 233, 236)" }}>t</span>ion</h2>
-             <div>Through our software platforms and custom application development
-              we aim to drive change within Small and Medium Enterprises
-             </div>
-             <StyledButton outline>Learn More</StyledButton>
-           </MobileLandingTextBox>
-        </MobileWrapper>
-      )
-    } else {
+
       return (
         <Wrapper>
            {/*
@@ -231,7 +238,6 @@ const Landing = props => {
         </Wrapper>
       )
     }
-  }
 
   return (
     <div>
